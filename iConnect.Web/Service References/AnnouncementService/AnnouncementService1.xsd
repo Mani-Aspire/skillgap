@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/iConnect.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/iConnect.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9091/AnnouncementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AnnouncementList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Announcements" nillable="true" type="tns:ArrayOfAnnouncementEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnouncementList" nillable="true" type="tns:AnnouncementList" />
+  <xs:complexType name="ArrayOfAnnouncementEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnnouncementEntity" nillable="true" type="tns:AnnouncementEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnnouncementEntity" nillable="true" type="tns:ArrayOfAnnouncementEntity" />
+  <xs:complexType name="AnnouncementEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnnouncementId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="tns:ImageEntity" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:UserEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnouncementEntity" nillable="true" type="tns:AnnouncementEntity" />
+  <xs:complexType name="ImageEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageEntity" nillable="true" type="tns:ImageEntity" />
+  <xs:complexType name="UserEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="tns:RoleEntity" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserEntity" nillable="true" type="tns:UserEntity" />
+  <xs:complexType name="RoleEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Privileges" nillable="true" type="tns:ArrayOfPrivilegeEntity" />
+      <xs:element minOccurs="0" name="RoleCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleEntity" nillable="true" type="tns:RoleEntity" />
+  <xs:complexType name="ArrayOfPrivilegeEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrivilegeEntity" nillable="true" type="tns:PrivilegeEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrivilegeEntity" nillable="true" type="tns:ArrayOfPrivilegeEntity" />
+  <xs:complexType name="PrivilegeEntity">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="PrivilegeEntity" nillable="true" type="tns:PrivilegeEntity" />
+  <xs:complexType name="Node">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeType" type="tns:NodeType" />
+      <xs:element minOccurs="0" name="Nodes" nillable="true" type="tns:ArrayOfNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Node" nillable="true" type="tns:Node" />
+  <xs:simpleType name="NodeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Folder" />
+      <xs:enumeration value="File" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NodeType" nillable="true" type="tns:NodeType" />
+  <xs:complexType name="ArrayOfNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Node" nillable="true" type="tns:Node" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNode" nillable="true" type="tns:ArrayOfNode" />
+  <xs:complexType name="MeetingRoomEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MeetingRoomEntity" nillable="true" type="tns:MeetingRoomEntity" />
+</xs:schema>

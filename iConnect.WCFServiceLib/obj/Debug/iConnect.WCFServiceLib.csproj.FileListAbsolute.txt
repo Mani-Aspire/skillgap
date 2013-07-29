@@ -1,0 +1,13 @@
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.WCFServiceLib.dll.config
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.WCFServiceLib.dll
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.WCFServiceLib.pdb
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.Common.dll
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.DataAccess.dll
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.Entities.dll
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\NLog.dll
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.Common.pdb
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.DataAccess.pdb
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\bin\Debug\iConnect.Entities.pdb
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\obj\Debug\iConnect.WCFServiceLib.dll
+E:\Projects\IConnect\iConnect\iConnect.WCFServiceLib\obj\Debug\iConnect.WCFServiceLib.pdb

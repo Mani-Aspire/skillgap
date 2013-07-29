@@ -1,0 +1,28 @@
+﻿body
+{
+    padding-top: 85px;
+    padding-bottom: 40px;
+    height:100%
+}
+
+.navbar-inner
+{
+    padding: 6px 0 0px 0;
+}
+
+.navbar-innerSmall
+{
+    min-height: 25px;
+    padding: 0px;
+}
+
+.container-fluidMain
+{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.topNavigator
+{
+    line-height: 10px;
+}

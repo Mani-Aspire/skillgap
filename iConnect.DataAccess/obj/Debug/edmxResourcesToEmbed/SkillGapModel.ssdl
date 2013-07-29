@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SkillGapModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SkillGapModelStoreContainer">
+    <EntitySet Name="Announcement" EntityType="SkillGapModel.Store.Announcement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiscussionBoard" EntityType="SkillGapModel.Store.DiscussionBoard" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiscussionDetail" EntityType="SkillGapModel.Store.DiscussionDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImageMaster" EntityType="SkillGapModel.Store.ImageMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MeetingRoom" EntityType="SkillGapModel.Store.MeetingRoom" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Menu" EntityType="SkillGapModel.Store.Menu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuTabs" EntityType="SkillGapModel.Store.MenuTabs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PhotoGallery" EntityType="SkillGapModel.Store.PhotoGallery" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PollMaster" EntityType="SkillGapModel.Store.PollMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PollOptions" EntityType="SkillGapModel.Store.PollOptions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PollResults" EntityType="SkillGapModel.Store.PollResults" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QuickLink" EntityType="SkillGapModel.Store.QuickLink" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Role" EntityType="SkillGapModel.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RoleRights" EntityType="SkillGapModel.Store.RoleRights" store:Type="Tables" store:Schema="dbo" store:Name="RoleRights">
+      <DefiningQuery>SELECT 
+      [RoleRights].[RoleID] AS [RoleID], 
+      [RoleRights].[MenuID] AS [MenuID], 
+      [RoleRights].[MenuWidgetID] AS [MenuWidgetID], 
+      [RoleRights].[CanAdd] AS [CanAdd], 
+      [RoleRights].[CanEdit] AS [CanEdit]
+      FROM [dbo].[RoleRights] AS [RoleRights]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sysdiagrams" EntityType="SkillGapModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimeZone" EntityType="SkillGapModel.Store.TimeZone" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="SkillGapModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Announcem__Creat__2C3393D0" Association="SkillGapModel.Store.FK__Announcem__Creat__2C3393D0">
+      <End Role="User" EntitySet="User" />
+      <End Role="Announcement" EntitySet="Announcement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Announcem__Image__2B3F6F97" Association="SkillGapModel.Store.FK__Announcem__Image__2B3F6F97">
+      <End Role="ImageMaster" EntitySet="ImageMaster" />
+      <End Role="Announcement" EntitySet="Announcement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Announcem__Modif__2D27B809" Association="SkillGapModel.Store.FK__Announcem__Modif__2D27B809">
+      <End Role="User" EntitySet="User" />
+      <End Role="Announcement" EntitySet="Announcement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Discussio__Creat__36B12243" Association="SkillGapModel.Store.FK__Discussio__Creat__36B12243">
+      <End Role="User" EntitySet="User" />
+      <End Role="DiscussionBoard" EntitySet="DiscussionBoard" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Discussio__Creat__3D5E1FD2" Association="SkillGapModel.Store.FK__Discussio__Creat__3D5E1FD2">
+      <End Role="User" EntitySet="User" />
+      <End Role="DiscussionDetail" EntitySet="DiscussionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Discussio__Discu__3C69FB99" Association="SkillGapModel.Store.FK__Discussio__Discu__3C69FB99">
+      <End Role="DiscussionBoard" EntitySet="DiscussionBoard" />
+      <End Role="DiscussionDetail" EntitySet="DiscussionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Discussio__Modif__37A5467C" Association="SkillGapModel.Store.FK__Discussio__Modif__37A5467C">
+      <End Role="User" EntitySet="User" />
+      <End Role="DiscussionBoard" EntitySet="DiscussionBoard" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Discussio__Modif__3E52440B" Association="SkillGapModel.Store.FK__Discussio__Modif__3E52440B">
+      <End Role="User" EntitySet="User" />
+      <End Role="DiscussionDetail" EntitySet="DiscussionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImageMast__Creat__25869641" Association="SkillGapModel.Store.FK__ImageMast__Creat__25869641">
+      <End Role="User" EntitySet="User" />
+      <End Role="ImageMaster" EntitySet="ImageMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImageMast__Modif__267ABA7A" Association="SkillGapModel.Store.FK__ImageMast__Modif__267ABA7A">
+      <End Role="User" EntitySet="User" />
+      <End Role="ImageMaster" EntitySet="ImageMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MeetingRo__Creat__571DF1D5" Association="SkillGapModel.Store.FK__MeetingRo__Creat__571DF1D5">
+      <End Role="User" EntitySet="User" />
+      <End Role="MeetingRoom" EntitySet="MeetingRoom" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MeetingRo__Modif__5812160E" Association="SkillGapModel.Store.FK__MeetingRo__Modif__5812160E">
+      <End Role="User" EntitySet="User" />
+      <End Role="MeetingRoom" EntitySet="MeetingRoom" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MenuTabs__MenuID__7E37BEF6" Association="SkillGapModel.Store.FK__MenuTabs__MenuID__7E37BEF6">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="MenuTabs" EntitySet="MenuTabs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhotoGall__Image__31EC6D26" Association="SkillGapModel.Store.FK__PhotoGall__Image__31EC6D26">
+      <End Role="ImageMaster" EntitySet="ImageMaster" />
+      <End Role="PhotoGallery" EntitySet="PhotoGallery" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollMaste__Creat__4316F928" Association="SkillGapModel.Store.FK__PollMaste__Creat__4316F928">
+      <End Role="User" EntitySet="User" />
+      <End Role="PollMaster" EntitySet="PollMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollMaste__Modif__440B1D61" Association="SkillGapModel.Store.FK__PollMaste__Modif__440B1D61">
+      <End Role="User" EntitySet="User" />
+      <End Role="PollMaster" EntitySet="PollMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollOptio__Creat__49C3F6B7" Association="SkillGapModel.Store.FK__PollOptio__Creat__49C3F6B7">
+      <End Role="User" EntitySet="User" />
+      <End Role="PollOptions" EntitySet="PollOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollOptio__Modif__4AB81AF0" Association="SkillGapModel.Store.FK__PollOptio__Modif__4AB81AF0">
+      <End Role="User" EntitySet="User" />
+      <End Role="PollOptions" EntitySet="PollOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollOptio__PollI__48CFD27E" Association="SkillGapModel.Store.FK__PollOptio__PollI__48CFD27E">
+      <End Role="PollMaster" EntitySet="PollMaster" />
+      <End Role="PollOptions" EntitySet="PollOptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollResul__Creat__5165187F" Association="SkillGapModel.Store.FK__PollResul__Creat__5165187F">
+      <End Role="User" EntitySet="User" />
+      <End Role="PollResults" EntitySet="PollResults" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollResul__Modif__52593CB8" Association="SkillGapModel.Store.FK__PollResul__Modif__52593CB8">
+      <End Role="User" EntitySet="User" />
+      <End Role="PollResults" EntitySet="PollResults" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollResul__PollO__5070F446" Association="SkillGapModel.Store.FK__PollResul__PollO__5070F446">
+      <End Role="PollOptions" EntitySet="PollOptions" />
+      <End Role="PollResults" EntitySet="PollResults" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PollResul__UserI__4F7CD00D" Association="SkillGapModel.Store.FK__PollResul__UserI__4F7CD00D">
+      <End Role="User" EntitySet="User" />
+      <End Role="PollResults" EntitySet="PollResults" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QuickLink__Creat__5DCAEF64" Association="SkillGapModel.Store.FK__QuickLink__Creat__5DCAEF64">
+      <End Role="User" EntitySet="User" />
+      <End Role="QuickLink" EntitySet="QuickLink" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QuickLink__Modif__5EBF139D" Association="SkillGapModel.Store.FK__QuickLink__Modif__5EBF139D">
+      <End Role="User" EntitySet="User" />
+      <End Role="QuickLink" EntitySet="QuickLink" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QuickLink__UserI__5CD6CB2B" Association="SkillGapModel.Store.FK__QuickLink__UserI__5CD6CB2B">
+      <End Role="User" EntitySet="User" />
+      <End Role="QuickLink" EntitySet="QuickLink" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RoleRight__MenuI__00200768" Association="SkillGapModel.Store.FK__RoleRight__MenuI__00200768">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="RoleRights" EntitySet="RoleRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RoleRight__MenuW__01142BA1" Association="SkillGapModel.Store.FK__RoleRight__MenuW__01142BA1">
+      <End Role="MenuTabs" EntitySet="MenuTabs" />
+      <End Role="RoleRights" EntitySet="RoleRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RoleRight__RoleI__02084FDA" Association="SkillGapModel.Store.FK__RoleRight__RoleI__02084FDA">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="RoleRights" EntitySet="RoleRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TimeZone__Create__22751F6C" Association="SkillGapModel.Store.FK__TimeZone__Create__22751F6C">
+      <End Role="User" EntitySet="User" />
+      <End Role="TimeZone" EntitySet="TimeZone" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TimeZone__Modifi__236943A5" Association="SkillGapModel.Store.FK__TimeZone__Modifi__236943A5">
+      <End Role="User" EntitySet="User" />
+      <End Role="TimeZone" EntitySet="TimeZone" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__RoleID__18EBB532" Association="SkillGapModel.Store.FK__User__RoleID__18EBB532">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DiscussionDetail_DiscussionDetail" Association="SkillGapModel.Store.FK_DiscussionDetail_DiscussionDetail">
+      <End Role="DiscussionDetail" EntitySet="DiscussionDetail" />
+      <End Role="DiscussionDetail1" EntitySet="DiscussionDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Announcement">
+    <Key>
+      <PropertyRef Name="AnnouncementID" />
+    </Key>
+    <Property Name="AnnouncementID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Body" Type="nvarchar" MaxLength="2000" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="ImageID" Type="int" />
+    <Property Name="Expirydate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DiscussionBoard">
+    <Key>
+      <PropertyRef Name="DiscussionBoardID" />
+    </Key>
+    <Property Name="DiscussionBoardID" Type="int" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ExpiryDate" Type="date" Nullable="false" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DiscussionDetail">
+    <Key>
+      <PropertyRef Name="DiscussionDetailID" />
+    </Key>
+    <Property Name="DiscussionDetailID" Type="int" Nullable="false" />
+    <Property Name="DiscussionBoardID" Type="int" Nullable="false" />
+    <Property Name="DicussionParentID" Type="int" />
+    <Property Name="DiscussionText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ImageMaster">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="int" Nullable="false" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="UploadedTime" Type="datetime" Nullable="false" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MeetingRoom">
+    <Key>
+      <PropertyRef Name="MeetingRoomID" />
+    </Key>
+    <Property Name="MeetingRoomID" Type="int" Nullable="false" />
+    <Property Name="Phase" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Floor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Wing" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RoomName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Telephone" Type="varchar" MaxLength="15" />
+    <Property Name="ProjectorInfo" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="MenuName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MenuURL" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="SortingOrder" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MenuTabs">
+    <Key>
+      <PropertyRef Name="MenuWidgetID" />
+    </Key>
+    <Property Name="MenuWidgetID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="WidgetName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="WidgetURL" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="DisplayOrder" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhotoGallery">
+    <Key>
+      <PropertyRef Name="PhotoGalleryID" />
+    </Key>
+    <Property Name="PhotoGalleryID" Type="int" Nullable="false" />
+    <Property Name="PhotoDescription" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ImageID" Type="int" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PollMaster">
+    <Key>
+      <PropertyRef Name="PollID" />
+    </Key>
+    <Property Name="PollID" Type="int" Nullable="false" />
+    <Property Name="PollQuestion" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PollOptions">
+    <Key>
+      <PropertyRef Name="PollOptionID" />
+    </Key>
+    <Property Name="PollOptionID" Type="int" Nullable="false" />
+    <Property Name="PollID" Type="int" Nullable="false" />
+    <Property Name="PollOption" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="OptionOrder" Type="tinyint" Nullable="false" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PollResults">
+    <Key>
+      <PropertyRef Name="PollResultID" />
+    </Key>
+    <Property Name="PollResultID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PollOptionID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="QuickLink">
+    <Key>
+      <PropertyRef Name="QuickLinkID" />
+    </Key>
+    <Property Name="QuickLinkID" Type="int" Nullable="false" />
+    <Property Name="Link" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RecStatus" Type="tinyint" Nullable="false" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RoleDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SkillGap_DB.dbo.RoleRights' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="RoleRights">
+    <Key>
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="MenuWidgetID" />
+    </Key>
+    <Property Name="RoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="MenuWidgetID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CanAdd" Type="bit" />
+    <Property Name="CanEdit" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TimeZone">
+    <Key>
+      <PropertyRef Name="TimeZoneID" />
+    </Key>
+    <Property Name="TimeZoneID" Type="int" Nullable="false" />
+    <Property Name="TimeZoneName" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="DisplayName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClockType" Type="nvarchar" MaxLength="20" />
+    <Property Name="ClockOrder" Type="tinyint" />
+    <Property Name="Createdby" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ACENo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MI" Type="char" MaxLength="20" />
+    <Property Name="LName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="SName" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="AccountStatus" Type="char" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK__Announcem__Creat__2C3393D0">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="Announcement" Type="SkillGapModel.Store.Announcement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Announcement">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Announcem__Image__2B3F6F97">
+    <End Role="ImageMaster" Type="SkillGapModel.Store.ImageMaster" Multiplicity="0..1" />
+    <End Role="Announcement" Type="SkillGapModel.Store.Announcement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageMaster">
+        <PropertyRef Name="ImageID" />
+      </Principal>
+      <Dependent Role="Announcement">
+        <PropertyRef Name="ImageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Announcem__Modif__2D27B809">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="Announcement" Type="SkillGapModel.Store.Announcement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Announcement">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Discussio__Creat__36B12243">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="DiscussionBoard" Type="SkillGapModel.Store.DiscussionBoard" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DiscussionBoard">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Discussio__Creat__3D5E1FD2">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="DiscussionDetail" Type="SkillGapModel.Store.DiscussionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DiscussionDetail">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Discussio__Discu__3C69FB99">
+    <End Role="DiscussionBoard" Type="SkillGapModel.Store.DiscussionBoard" Multiplicity="1" />
+    <End Role="DiscussionDetail" Type="SkillGapModel.Store.DiscussionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiscussionBoard">
+        <PropertyRef Name="DiscussionBoardID" />
+      </Principal>
+      <Dependent Role="DiscussionDetail">
+        <PropertyRef Name="DiscussionBoardID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Discussio__Modif__37A5467C">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="DiscussionBoard" Type="SkillGapModel.Store.DiscussionBoard" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DiscussionBoard">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Discussio__Modif__3E52440B">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="DiscussionDetail" Type="SkillGapModel.Store.DiscussionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DiscussionDetail">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImageMast__Creat__25869641">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="ImageMaster" Type="SkillGapModel.Store.ImageMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ImageMaster">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImageMast__Modif__267ABA7A">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="ImageMaster" Type="SkillGapModel.Store.ImageMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ImageMaster">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MeetingRo__Creat__571DF1D5">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="MeetingRoom" Type="SkillGapModel.Store.MeetingRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="MeetingRoom">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MeetingRo__Modif__5812160E">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="MeetingRoom" Type="SkillGapModel.Store.MeetingRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="MeetingRoom">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MenuTabs__MenuID__7E37BEF6">
+    <End Role="Menu" Type="SkillGapModel.Store.Menu" Multiplicity="1" />
+    <End Role="MenuTabs" Type="SkillGapModel.Store.MenuTabs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="MenuTabs">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhotoGall__Image__31EC6D26">
+    <End Role="ImageMaster" Type="SkillGapModel.Store.ImageMaster" Multiplicity="0..1" />
+    <End Role="PhotoGallery" Type="SkillGapModel.Store.PhotoGallery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageMaster">
+        <PropertyRef Name="ImageID" />
+      </Principal>
+      <Dependent Role="PhotoGallery">
+        <PropertyRef Name="ImageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollMaste__Creat__4316F928">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="PollMaster" Type="SkillGapModel.Store.PollMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollMaster">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollMaste__Modif__440B1D61">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="PollMaster" Type="SkillGapModel.Store.PollMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollMaster">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollOptio__Creat__49C3F6B7">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="PollOptions" Type="SkillGapModel.Store.PollOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollOptions">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollOptio__Modif__4AB81AF0">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="PollOptions" Type="SkillGapModel.Store.PollOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollOptions">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollOptio__PollI__48CFD27E">
+    <End Role="PollMaster" Type="SkillGapModel.Store.PollMaster" Multiplicity="1" />
+    <End Role="PollOptions" Type="SkillGapModel.Store.PollOptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PollMaster">
+        <PropertyRef Name="PollID" />
+      </Principal>
+      <Dependent Role="PollOptions">
+        <PropertyRef Name="PollID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollResul__Creat__5165187F">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="PollResults" Type="SkillGapModel.Store.PollResults" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollResults">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollResul__Modif__52593CB8">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="PollResults" Type="SkillGapModel.Store.PollResults" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollResults">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollResul__PollO__5070F446">
+    <End Role="PollOptions" Type="SkillGapModel.Store.PollOptions" Multiplicity="1" />
+    <End Role="PollResults" Type="SkillGapModel.Store.PollResults" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PollOptions">
+        <PropertyRef Name="PollOptionID" />
+      </Principal>
+      <Dependent Role="PollResults">
+        <PropertyRef Name="PollOptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PollResul__UserI__4F7CD00D">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="PollResults" Type="SkillGapModel.Store.PollResults" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PollResults">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QuickLink__Creat__5DCAEF64">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="QuickLink" Type="SkillGapModel.Store.QuickLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="QuickLink">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QuickLink__Modif__5EBF139D">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="QuickLink" Type="SkillGapModel.Store.QuickLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="QuickLink">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QuickLink__UserI__5CD6CB2B">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="QuickLink" Type="SkillGapModel.Store.QuickLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="QuickLink">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RoleRight__MenuI__00200768">
+    <End Role="Menu" Type="SkillGapModel.Store.Menu" Multiplicity="1" />
+    <End Role="RoleRights" Type="SkillGapModel.Store.RoleRights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="RoleRights">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RoleRight__MenuW__01142BA1">
+    <End Role="MenuTabs" Type="SkillGapModel.Store.MenuTabs" Multiplicity="1" />
+    <End Role="RoleRights" Type="SkillGapModel.Store.RoleRights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuTabs">
+        <PropertyRef Name="MenuWidgetID" />
+      </Principal>
+      <Dependent Role="RoleRights">
+        <PropertyRef Name="MenuWidgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RoleRight__RoleI__02084FDA">
+    <End Role="Role" Type="SkillGapModel.Store.Role" Multiplicity="1" />
+    <End Role="RoleRights" Type="SkillGapModel.Store.RoleRights" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="RoleRights">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TimeZone__Create__22751F6C">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="1" />
+    <End Role="TimeZone" Type="SkillGapModel.Store.TimeZone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="TimeZone">
+        <PropertyRef Name="Createdby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TimeZone__Modifi__236943A5">
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="0..1" />
+    <End Role="TimeZone" Type="SkillGapModel.Store.TimeZone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="TimeZone">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__RoleID__18EBB532">
+    <End Role="Role" Type="SkillGapModel.Store.Role" Multiplicity="1" />
+    <End Role="User" Type="SkillGapModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DiscussionDetail_DiscussionDetail">
+    <End Role="DiscussionDetail" Type="SkillGapModel.Store.DiscussionDetail" Multiplicity="0..1" />
+    <End Role="DiscussionDetail1" Type="SkillGapModel.Store.DiscussionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiscussionDetail">
+        <PropertyRef Name="DiscussionDetailID" />
+      </Principal>
+      <Dependent Role="DiscussionDetail1">
+        <PropertyRef Name="DicussionParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

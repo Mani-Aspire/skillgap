@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SkillGapModelStoreContainer" CdmEntityContainer="SkillGapEntities">
+    <EntitySetMapping Name="Announcement">
+      <EntityTypeMapping TypeName="SkillGapModel.Announcement">
+        <MappingFragment StoreEntitySet="Announcement">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="AnnouncementID" ColumnName="AnnouncementID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiscussionBoard">
+      <EntityTypeMapping TypeName="SkillGapModel.DiscussionBoard">
+        <MappingFragment StoreEntitySet="DiscussionBoard">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="DiscussionBoardID" ColumnName="DiscussionBoardID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiscussionDetail">
+      <EntityTypeMapping TypeName="SkillGapModel.DiscussionDetail">
+        <MappingFragment StoreEntitySet="DiscussionDetail">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="DiscussionText" ColumnName="DiscussionText" />
+          <ScalarProperty Name="DicussionParentID" ColumnName="DicussionParentID" />
+          <ScalarProperty Name="DiscussionBoardID" ColumnName="DiscussionBoardID" />
+          <ScalarProperty Name="DiscussionDetailID" ColumnName="DiscussionDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageMaster">
+      <EntityTypeMapping TypeName="SkillGapModel.ImageMaster">
+        <MappingFragment StoreEntitySet="ImageMaster">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="UploadedTime" ColumnName="UploadedTime" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menu">
+      <EntityTypeMapping TypeName="SkillGapModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="SortingOrder" ColumnName="SortingOrder" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MenuURL" ColumnName="MenuURL" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuTabs">
+      <EntityTypeMapping TypeName="SkillGapModel.MenuTabs">
+        <MappingFragment StoreEntitySet="MenuTabs">
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="WidgetURL" ColumnName="WidgetURL" />
+          <ScalarProperty Name="WidgetName" ColumnName="WidgetName" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="MenuWidgetID" ColumnName="MenuWidgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhotoGallery">
+      <EntityTypeMapping TypeName="SkillGapModel.PhotoGallery">
+        <MappingFragment StoreEntitySet="PhotoGallery">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+          <ScalarProperty Name="PhotoDescription" ColumnName="PhotoDescription" />
+          <ScalarProperty Name="PhotoGalleryID" ColumnName="PhotoGalleryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PollMaster">
+      <EntityTypeMapping TypeName="SkillGapModel.PollMaster">
+        <MappingFragment StoreEntitySet="PollMaster">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="PollQuestion" ColumnName="PollQuestion" />
+          <ScalarProperty Name="PollID" ColumnName="PollID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PollOptions">
+      <EntityTypeMapping TypeName="SkillGapModel.PollOptions">
+        <MappingFragment StoreEntitySet="PollOptions">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="OptionOrder" ColumnName="OptionOrder" />
+          <ScalarProperty Name="PollOption" ColumnName="PollOption" />
+          <ScalarProperty Name="PollID" ColumnName="PollID" />
+          <ScalarProperty Name="PollOptionID" ColumnName="PollOptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PollResults">
+      <EntityTypeMapping TypeName="SkillGapModel.PollResults">
+        <MappingFragment StoreEntitySet="PollResults">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PollOptionID" ColumnName="PollOptionID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PollResultID" ColumnName="PollResultID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickLink">
+      <EntityTypeMapping TypeName="SkillGapModel.QuickLink">
+        <MappingFragment StoreEntitySet="QuickLink">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="QuickLinkID" ColumnName="QuickLinkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="SkillGapModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleRights">
+      <EntityTypeMapping TypeName="SkillGapModel.RoleRights">
+        <MappingFragment StoreEntitySet="RoleRights">
+          <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+          <ScalarProperty Name="CanAdd" ColumnName="CanAdd" />
+          <ScalarProperty Name="MenuWidgetID" ColumnName="MenuWidgetID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SkillGapModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="MI" ColumnName="MI" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ACENo" ColumnName="ACENo" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MeetingRoom">
+      <EntityTypeMapping TypeName="SkillGapModel.MeetingRoom">
+        <MappingFragment StoreEntitySet="MeetingRoom">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="RecStatus" ColumnName="RecStatus" />
+          <ScalarProperty Name="ProjectorInfo" ColumnName="ProjectorInfo" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+          <ScalarProperty Name="Wing" ColumnName="Wing" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Phase" ColumnName="Phase" />
+          <ScalarProperty Name="MeetingRoomID" ColumnName="MeetingRoomID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SkillGapModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimeZone">
+      <EntityTypeMapping TypeName="SkillGapModel.TimeZone">
+        <MappingFragment StoreEntitySet="TimeZone">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="ClockOrder" ColumnName="ClockOrder" />
+          <ScalarProperty Name="ClockType" ColumnName="ClockType" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TimeZoneName" ColumnName="TimeZoneName" />
+          <ScalarProperty Name="TimeZoneID" ColumnName="TimeZoneID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
