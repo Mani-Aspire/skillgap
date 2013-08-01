@@ -1,0 +1,17 @@
+﻿@model iConnect.Presentation.Models.Node
+           
+@foreach (var item in Model.Nodes)
+{ 
+    <ul>
+    @if (item != null)
+    {           
+        <li Path="@item.NodePath.Replace(TempData["RootUrl"].ToString(), "")" state="open"><a href="#" class="usr" >@item.Name</a>
+        @if (item.Nodes.Count > 0)
+        {         
+            @Html.Partial("SubFolder", item
+            )           
+        }
+        </li>
+    }
+    </ul>
+}
