@@ -33,8 +33,6 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__MenuTabs__MenuID__7E37BEF6", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Menu), "MenuTabs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.MenuTabs))]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__RoleRight__MenuI__00200768", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Menu), "RoleRights", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.RoleRights), true)]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__RoleRight__MenuW__01142BA1", "MenuTabs", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.MenuTabs), "RoleRights", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.RoleRights), true)]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_PollMaster_User", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster))]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollOptio__Creat__49C3F6B7", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollOptions))]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollResul__UserI__4F7CD00D", "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.PollOptions), "PollResults", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollResults))]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__RoleRight__RoleI__02084FDA", "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Role), "RoleRights", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.RoleRights), true)]
@@ -47,6 +45,9 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__MeetingRo__Modif__5812160E", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "MeetingRoom", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.MeetingRoom))]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__QuickLink__Modif__5EBF139D", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "QuickLink", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.QuickLink))]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK_QuickLink_User", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "QuickLink", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.QuickLink))]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster))]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_PollMaster_User", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster))]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_PollOptions_PollMaster", "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.PollMaster), "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollOptions))]
 
 #endregion
 
@@ -209,22 +210,6 @@ namespace iConnect.DataAccess
             }
         }
         private ObjectSet<PhotoGallery> _PhotoGallery;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<PollMaster> PollMaster
-        {
-            get
-            {
-                if ((_PollMaster == null))
-                {
-                    _PollMaster = base.CreateObjectSet<PollMaster>("PollMaster");
-                }
-                return _PollMaster;
-            }
-        }
-        private ObjectSet<PollMaster> _PollMaster;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -401,6 +386,22 @@ namespace iConnect.DataAccess
             }
         }
         private ObjectSet<QuickLink> _QuickLink;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<PollMaster> PollMaster
+        {
+            get
+            {
+                if ((_PollMaster == null))
+                {
+                    _PollMaster = base.CreateObjectSet<PollMaster>("PollMaster");
+                }
+                return _PollMaster;
+            }
+        }
+        private ObjectSet<PollMaster> _PollMaster;
 
         #endregion
         #region AddTo Methods
@@ -459,14 +460,6 @@ namespace iConnect.DataAccess
         public void AddToPhotoGallery(PhotoGallery photoGallery)
         {
             base.AddObject("PhotoGallery", photoGallery);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the PollMaster EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToPollMaster(PollMaster pollMaster)
-        {
-            base.AddObject("PollMaster", pollMaster);
         }
     
         /// <summary>
@@ -555,6 +548,14 @@ namespace iConnect.DataAccess
         public void AddToQuickLink(QuickLink quickLink)
         {
             base.AddObject("QuickLink", quickLink);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the PollMaster EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToPollMaster(PollMaster pollMaster)
+        {
+            base.AddObject("PollMaster", pollMaster);
         }
 
         #endregion
@@ -2849,7 +2850,7 @@ namespace iConnect.DataAccess
         /// <param name="pollQuestion">Initial value of the PollQuestion property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static PollMaster CreatePollMaster(global::System.Int32 pollID, global::System.String pollQuestion, global::System.Byte recStatus, global::System.DateTime createdDate)
+        public static PollMaster CreatePollMaster(global::System.Guid pollID, global::System.String pollQuestion, global::System.Byte recStatus, global::System.DateTime createdDate)
         {
             PollMaster pollMaster = new PollMaster();
             pollMaster.PollID = pollID;
@@ -2867,7 +2868,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PollID
+        public global::System.Guid PollID
         {
             get
             {
@@ -2885,8 +2886,8 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Int32 _PollID;
-        partial void OnPollIDChanging(global::System.Int32 value);
+        private global::System.Guid _PollID;
+        partial void OnPollIDChanging(global::System.Guid value);
         partial void OnPollIDChanged();
     
         /// <summary>
@@ -2996,7 +2997,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "User")]
-        public User CreatedBy
+        public User User
         {
             get
             {
@@ -3012,7 +3013,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> UserReference
         {
             get
             {
@@ -3034,7 +3035,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollMaster_User", "User")]
-        public User ModifiedBy
+        public User User1
         {
             get
             {
@@ -3050,7 +3051,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -3061,6 +3062,28 @@ namespace iConnect.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK_PollMaster_User", "User", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollOptions_PollMaster", "PollOptions")]
+        public EntityCollection<PollOptions> PollOptions
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollOptions>("SkillGapModel.FK_PollOptions_PollMaster", "PollOptions");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollOptions>("SkillGapModel.FK_PollOptions_PollMaster", "PollOptions", value);
                 }
             }
         }
@@ -3257,6 +3280,44 @@ namespace iConnect.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollResults", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollOptions_PollMaster", "PollMaster")]
+        public PollMaster PollMaster
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<PollMaster> PollMasterReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster", value);
                 }
             }
         }
@@ -4855,50 +4916,6 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "PollMaster")]
-        public EntityCollection<PollMaster> PollMaster
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollMaster_User", "PollMaster")]
-        public EntityCollection<PollMaster> PollMaster1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK_PollMaster_User", "PollMaster");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK_PollMaster_User", "PollMaster", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollOptio__Creat__49C3F6B7", "PollOptions")]
         public EntityCollection<PollOptions> PollOptions
         {
@@ -5125,6 +5142,50 @@ namespace iConnect.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QuickLink>("SkillGapModel.FK_QuickLink_User", "QuickLink", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "PollMaster")]
+        public EntityCollection<PollMaster> PollMaster
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollMaster_User", "PollMaster")]
+        public EntityCollection<PollMaster> PollMaster1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK_PollMaster_User", "PollMaster");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK_PollMaster_User", "PollMaster", value);
                 }
             }
         }
