@@ -107,9 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KnowledgeBaseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DirectoryLibrary.cs" />
+    <Compile Include="Models\Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\AnnouncementService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -127,6 +130,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="CSS\Custom.css" />
+    <Content Include="CSS\Images\d.gif" />
+    <Content Include="CSS\Images\d.png" />
+    <Content Include="CSS\Images\FileCopy.png" />
+    <Content Include="CSS\JsTree.css" />
     <Content Include="Global.asax" />
     <Content Include="CSS\Bootstrap\bootstrap-responsive.css" />
     <Content Include="CSS\Bootstrap\bootstrap-responsive.min.css" />
@@ -139,6 +146,8 @@
     <Content Include="Scripts\Base\Bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Scripts\Base\Bootstrap\js\bootstrap.js" />
     <Content Include="Scripts\Base\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Scripts\Base\Jquery\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\Base\Jquery\jquery-ui-1.8.11.min.js" />
     <Content Include="Scripts\Data\Data.js" />
     <Content Include="Scripts\Base\Jquery\jquery-1.10.1.js" />
     <Content Include="Scripts\Base\Jquery\modernizr-1.7.js" />
@@ -146,6 +155,8 @@
     <Content Include="Scripts\Base\Knockout\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\Base\Knockout\knockout-2.3.0.js" />
     <Content Include="Scripts\ICNamespace.js" />
+    <Content Include="Scripts\jquery.jstree.js" />
+    <Content Include="Scripts\KnowledgeBase\KnowledgeBase.js" />
     <Content Include="Scripts\Startup.js" />
     <Content Include="Scripts\Utils.js" />
     <None Include="Properties\DataSources\iConnect.Entities.AnnouncementList.datasource" />
@@ -207,6 +218,9 @@
     <None Include="Service References\MeetingRoomService\MeetingRoomService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\KnowledgeBase\AttachDoc.cshtml" />
+    <Content Include="Views\KnowledgeBase\Index.cshtml" />
+    <Content Include="Views\KnowledgeBase\SubFolder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
