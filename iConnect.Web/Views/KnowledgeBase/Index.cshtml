@@ -1,13 +1,23 @@
 ﻿@model List<iConnect.Presentation.Models.Node>
 @{
-    ViewBag.Title = "Directory Demo Tree";
+    ViewBag.Title = "KnowledgeBase";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 <link href="@Url.Content("~/CSS/JsTree.css")" rel="stylesheet" type="text/css" />
 <script src="@Url.Content("~/Scripts/Base/Jquery/jquery-ui-1.8.11.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/Base/Bootstrap/js/bootstrap.js")" type="text/javascript"></script>
 <link href="@Url.Content("~/CSS/Bootstrap/bootstrap.css")" rel="stylesheet" type="text/css" />
+<style type="text/css">
+ a:hover {
+  cursor:pointer;
+ }
+</style>
 <table id="tblknowledge">
+    <tr>
+        <td colspan="3" style="padding-top:5px;">
+            <img src="~/CSS/Images/Home.jpeg" width="30px" height="30px" /> <b><font color="#049ED1" id="knowledgebrdcrb">Knowledge Base</font></b>
+        </td>
+    </tr>
     <tr>
         <td valign="top" style="width: 250px">
             <table id="tblkwldgTree" border="1" cellpadding="0" cellspacing="0">
@@ -20,7 +30,7 @@
                 <tr>
                     <td style="background-color: #E1F4FA" valign="top">
                         <div id="divtree">
-                            <ul id="tree">
+                            <ul id="tree">  
                                 @foreach (var item in Model)
                                 {
                                     if (item != null)

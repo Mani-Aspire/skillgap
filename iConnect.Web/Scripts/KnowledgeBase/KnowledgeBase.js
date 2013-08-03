@@ -77,14 +77,37 @@
                     return false;
                 }
             }
+        }).bind("select_node.jstree", function (e, data) {
+            //data.inst.open_node(data.rslt.obj); //used to close inactive branches 
+            displayBreadCrumb(e, data);
         });
 });
 
-function AttachFile(obj) {
 
+    function displayBreadCrumb(e, data) {
+    var pathString = "";
+    var nodeString = "";
+    data.rslt.obj.parents("li").each(function () {
+
+        nodeString = ' <a onclick="SelectNodeByPath(\'' + $(this).attr('path').replace(/a|\\/g, "\\$&") + '\')">' + $(this).children("a").text() + '</a>';
+        pathString = nodeString + " <img src='../../CSS/Images/rightArrow.jpeg' width='10px' height='10px'/> " + pathString; // <-- this not working
+    });
+    pathString = "Knowledge Base <img src='../../CSS/Images/rightArrow.jpeg' width='10px' height='10px'/> " + pathString + ' <a onclick="SelectNodeByPath(\'' + data.rslt.obj.attr('path').replace(/a|\\/g, "\\$&") + '\')">' + data.rslt.obj.children('a').text() + '</a>';
+    $('#knowledgebrdcrb').html(pathString);
+}
+
+function SelectNodeByPath(nodePath) {
+    var $tree = $("#divtree"),
+    node = $tree.find('li').filter(function () {
+        return $(this).attr('path') === nodePath;
+    });
+    $tree.jstree('deselect_all');
+    $tree.jstree('select_node', node);
+}
+
+function AttachFile(obj) {
     $('#AttachFileDialog').modal('show');
     $('#hdnFilePath').val(obj[0].attributes['path'].value);
-    //$("#Path").text(obj[0].attributes['path'].value);
     $("#file1").val('');
 }
 
@@ -99,8 +122,8 @@ function Cancel() {
 
 function uploadFile() {
     var fileInput = document.getElementById('file1');
-
-    if (fileInput.files.length < 1) {
+    var file = $('input[type=file]').val();
+    if (!file) {
         alert('Please attach file');
         return;
     }
