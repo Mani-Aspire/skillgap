@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Collections.ObjectModel;
+using System.ServiceModel;
 
 namespace iConnect.Presentation.Controllers
 {
@@ -14,10 +15,21 @@ namespace iConnect.Presentation.Controllers
 
         public ActionResult Index()
         {
-			MeetingRoomService.MeetingRoomClient meetingRommClient = new MeetingRoomService.MeetingRoomClient();
-			iConnect.Presentation.MeetingRoomService.MeetingRoomEntity[] rooms = meetingRommClient.SearchMeetingRoom( "capella" );
-			this.ViewData[ "MeetingRoomDetails" ] = rooms;
-			return View();
+            try
+            {
+                MeetingRoomService.MeetingRoomClient meetingRommClient = new MeetingRoomService.MeetingRoomClient();
+                iConnect.Presentation.MeetingRoomService.MeetingRoomEntity[] rooms = meetingRommClient.SearchMeetingRoom("capella");
+                this.ViewData["MeetingRoomDetails"] = rooms;
+            }
+            catch (FaultException ex)
+            {
+                string error = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+            }
+            return View();
 		}
     }
 }

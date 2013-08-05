@@ -5,9 +5,11 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using System.Collections.ObjectModel;
+using iConnect.Service.Extensions;
 
 namespace iConnect.WCFServiceLib
 {
+    [ErrorHandlingBehavior]
 	public class MeetingRoomService : IMeetingRoom
 	{
 		public Collection<iConnect.Entities.MeetingRoomEntity> SearchMeetingRoom( string searchText )

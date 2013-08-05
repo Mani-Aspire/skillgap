@@ -68,6 +68,10 @@
       <Project>{2ECC888E-B9C7-4F04-B680-694DA71D37E4}</Project>
       <Name>iConnect.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\iConnect.Service.Extensions\iConnect.Service.Extensions.csproj">
+      <Project>{6DC3B128-0BEA-44A1-866A-044CA86101A9}</Project>
+      <Name>iConnect.Service.Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
