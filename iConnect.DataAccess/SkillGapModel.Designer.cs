@@ -18,36 +18,39 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Announcem__Creat__2C3393D0", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "Announcement", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.Announcement))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Announcem__Modif__2D27B809", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "Announcement", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.Announcement))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_Announcement_ImageMaster", "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.ImageMaster), "Announcement", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.Announcement))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Creat__36B12243", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "DiscussionBoard", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionBoard))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Modif__37A5467C", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "DiscussionBoard", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionBoard))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionBoard", "DiscussionBoard", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.DiscussionBoard), "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionDetail))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Creat__3D5E1FD2", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionDetail))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Modif__3E52440B", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionDetail))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.DiscussionDetail), "DiscussionDetail1", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.DiscussionDetail), true)]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__ImageMast__Creat__25869641", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.ImageMaster))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__ImageMast__Modif__267ABA7A", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.ImageMaster))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PhotoGall__Image__373B3228", "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.ImageMaster), "PhotoGallery", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PhotoGallery))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__MenuTabs__MenuID__7E37BEF6", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Menu), "MenuTabs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.MenuTabs))]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Announcem__Creat__2C3393D0", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "Announcement", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.Announcement), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Announcem__Image__2B3F6F97", "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.ImageMaster), "Announcement", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.Announcement), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Announcem__Modif__2D27B809", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "Announcement", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.Announcement), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Creat__36B12243", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "DiscussionBoard", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionBoard), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Discu__3C69FB99", "DiscussionBoard", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.DiscussionBoard), "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionDetail), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Modif__37A5467C", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "DiscussionBoard", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionBoard), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Creat__3D5E1FD2", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionDetail), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Discussio__Modif__3E52440B", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionDetail), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.DiscussionDetail), "DiscussionDetail1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.DiscussionDetail), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__ImageMast__Creat__25869641", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.ImageMaster), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__ImageMast__Modif__267ABA7A", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.ImageMaster), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PhotoGall__Image__31EC6D26", "ImageMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.ImageMaster), "PhotoGallery", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PhotoGallery), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__MenuTabs__MenuID__7E37BEF6", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Menu), "MenuTabs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.MenuTabs), true)]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__RoleRight__MenuI__00200768", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Menu), "RoleRights", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.RoleRights), true)]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__RoleRight__MenuW__01142BA1", "MenuTabs", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.MenuTabs), "RoleRights", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.RoleRights), true)]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollOptio__Creat__49C3F6B7", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollOptions))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollResul__UserI__4F7CD00D", "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.PollOptions), "PollResults", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollResults))]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollMaste__Modif__440B1D61", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollOptio__PollI__48CFD27E", "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.PollMaster), "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollOptions), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollOptio__Creat__49C3F6B7", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollOptions), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollOptio__Modif__4AB81AF0", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollOptions), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollResul__PollO__5070F446", "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.PollOptions), "PollResults", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollResults), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollResul__Creat__5165187F", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollResults", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollResults), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollResul__Modif__52593CB8", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "PollResults", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollResults), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollResul__UserI__4F7CD00D", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollResults", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollResults), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__QuickLink__Creat__5DCAEF64", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "QuickLink", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.QuickLink), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__QuickLink__Modif__5EBF139D", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "QuickLink", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.QuickLink), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__QuickLink__UserI__5CD6CB2B", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "QuickLink", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.QuickLink), true)]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__RoleRight__RoleI__02084FDA", "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Role), "RoleRights", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.RoleRights), true)]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__User__RoleID__18EBB532", "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Role), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.User))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__TimeZone__Create__22751F6C", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "TimeZoneMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.TimeZoneMaster))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__TimeZone__Modifi__236943A5", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "TimeZoneMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.TimeZoneMaster))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Weather__Creat__2C3393D0", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "UserWeather", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.UserWeather))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__Weather__Modif__2D27B809", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "UserWeather", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.UserWeather))]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__User__RoleID__18EBB532", "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.Role), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.User), true)]
 [assembly: EdmRelationshipAttribute("SkillGapModel", "FK__MeetingRo__Creat__571DF1D5", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "MeetingRoom", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.MeetingRoom), true)]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__MeetingRo__Modif__5812160E", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "MeetingRoom", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.MeetingRoom))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__QuickLink__Modif__5EBF139D", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "QuickLink", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.QuickLink))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_QuickLink_User", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "QuickLink", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.QuickLink))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_PollMaster_User", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollMaster))]
-[assembly: EdmRelationshipAttribute("SkillGapModel", "FK_PollOptions_PollMaster", "PollMaster", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.PollMaster), "PollOptions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.PollOptions))]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__MeetingRo__Modif__5812160E", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "MeetingRoom", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.MeetingRoom), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__TimeZone__Create__22751F6C", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(iConnect.DataAccess.User), "TimeZone", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.TimeZone), true)]
+[assembly: EdmRelationshipAttribute("SkillGapModel", "FK__TimeZone__Modifi__236943A5", "User", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(iConnect.DataAccess.User), "TimeZone", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(iConnect.DataAccess.TimeZone), true)]
 
 #endregion
 
@@ -214,6 +217,22 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<PollMaster> PollMaster
+        {
+            get
+            {
+                if ((_PollMaster == null))
+                {
+                    _PollMaster = base.CreateObjectSet<PollMaster>("PollMaster");
+                }
+                return _PollMaster;
+            }
+        }
+        private ObjectSet<PollMaster> _PollMaster;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<PollOptions> PollOptions
         {
             get
@@ -242,6 +261,22 @@ namespace iConnect.DataAccess
             }
         }
         private ObjectSet<PollResults> _PollResults;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<QuickLink> QuickLink
+        {
+            get
+            {
+                if ((_QuickLink == null))
+                {
+                    _QuickLink = base.CreateObjectSet<QuickLink>("QuickLink");
+                }
+                return _QuickLink;
+            }
+        }
+        private ObjectSet<QuickLink> _QuickLink;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -278,22 +313,6 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<TimeZoneMaster> TimeZoneMaster
-        {
-            get
-            {
-                if ((_TimeZoneMaster == null))
-                {
-                    _TimeZoneMaster = base.CreateObjectSet<TimeZoneMaster>("TimeZoneMaster");
-                }
-                return _TimeZoneMaster;
-            }
-        }
-        private ObjectSet<TimeZoneMaster> _TimeZoneMaster;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<User> User
         {
             get
@@ -306,54 +325,6 @@ namespace iConnect.DataAccess
             }
         }
         private ObjectSet<User> _User;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<UserTimeZone> UserTimeZone
-        {
-            get
-            {
-                if ((_UserTimeZone == null))
-                {
-                    _UserTimeZone = base.CreateObjectSet<UserTimeZone>("UserTimeZone");
-                }
-                return _UserTimeZone;
-            }
-        }
-        private ObjectSet<UserTimeZone> _UserTimeZone;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<UserWeather> UserWeather
-        {
-            get
-            {
-                if ((_UserWeather == null))
-                {
-                    _UserWeather = base.CreateObjectSet<UserWeather>("UserWeather");
-                }
-                return _UserWeather;
-            }
-        }
-        private ObjectSet<UserWeather> _UserWeather;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<WeatherMaster> WeatherMaster
-        {
-            get
-            {
-                if ((_WeatherMaster == null))
-                {
-                    _WeatherMaster = base.CreateObjectSet<WeatherMaster>("WeatherMaster");
-                }
-                return _WeatherMaster;
-            }
-        }
-        private ObjectSet<WeatherMaster> _WeatherMaster;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -374,34 +345,34 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<QuickLink> QuickLink
+        public ObjectSet<sysdiagrams> sysdiagrams
         {
             get
             {
-                if ((_QuickLink == null))
+                if ((_sysdiagrams == null))
                 {
-                    _QuickLink = base.CreateObjectSet<QuickLink>("QuickLink");
+                    _sysdiagrams = base.CreateObjectSet<sysdiagrams>("sysdiagrams");
                 }
-                return _QuickLink;
+                return _sysdiagrams;
             }
         }
-        private ObjectSet<QuickLink> _QuickLink;
+        private ObjectSet<sysdiagrams> _sysdiagrams;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<PollMaster> PollMaster
+        public ObjectSet<TimeZone> TimeZone
         {
             get
             {
-                if ((_PollMaster == null))
+                if ((_TimeZone == null))
                 {
-                    _PollMaster = base.CreateObjectSet<PollMaster>("PollMaster");
+                    _TimeZone = base.CreateObjectSet<TimeZone>("TimeZone");
                 }
-                return _PollMaster;
+                return _TimeZone;
             }
         }
-        private ObjectSet<PollMaster> _PollMaster;
+        private ObjectSet<TimeZone> _TimeZone;
 
         #endregion
         #region AddTo Methods
@@ -463,6 +434,14 @@ namespace iConnect.DataAccess
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the PollMaster EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToPollMaster(PollMaster pollMaster)
+        {
+            base.AddObject("PollMaster", pollMaster);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the PollOptions EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToPollOptions(PollOptions pollOptions)
@@ -476,6 +455,14 @@ namespace iConnect.DataAccess
         public void AddToPollResults(PollResults pollResults)
         {
             base.AddObject("PollResults", pollResults);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the QuickLink EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToQuickLink(QuickLink quickLink)
+        {
+            base.AddObject("QuickLink", quickLink);
         }
     
         /// <summary>
@@ -495,43 +482,11 @@ namespace iConnect.DataAccess
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the TimeZoneMaster EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToTimeZoneMaster(TimeZoneMaster timeZoneMaster)
-        {
-            base.AddObject("TimeZoneMaster", timeZoneMaster);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the User EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToUser(User user)
         {
             base.AddObject("User", user);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the UserTimeZone EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToUserTimeZone(UserTimeZone userTimeZone)
-        {
-            base.AddObject("UserTimeZone", userTimeZone);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the UserWeather EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToUserWeather(UserWeather userWeather)
-        {
-            base.AddObject("UserWeather", userWeather);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the WeatherMaster EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToWeatherMaster(WeatherMaster weatherMaster)
-        {
-            base.AddObject("WeatherMaster", weatherMaster);
         }
     
         /// <summary>
@@ -543,19 +498,19 @@ namespace iConnect.DataAccess
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the QuickLink EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToQuickLink(QuickLink quickLink)
+        public void AddTosysdiagrams(sysdiagrams sysdiagrams)
         {
-            base.AddObject("QuickLink", quickLink);
+            base.AddObject("sysdiagrams", sysdiagrams);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the PollMaster EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the TimeZone EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToPollMaster(PollMaster pollMaster)
+        public void AddToTimeZone(TimeZone timeZone)
         {
-            base.AddObject("PollMaster", pollMaster);
+            base.AddObject("TimeZone", timeZone);
         }
 
         #endregion
@@ -579,18 +534,20 @@ namespace iConnect.DataAccess
         /// <summary>
         /// Create a new Announcement object.
         /// </summary>
-        /// <param name="announcementId">Initial value of the AnnouncementId property.</param>
+        /// <param name="announcementID">Initial value of the AnnouncementID property.</param>
         /// <param name="title">Initial value of the Title property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
         /// <param name="expirydate">Initial value of the Expirydate property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static Announcement CreateAnnouncement(global::System.Guid announcementId, global::System.String title, global::System.Byte recStatus, global::System.DateTime expirydate, global::System.DateTime createdDate)
+        public static Announcement CreateAnnouncement(global::System.Int32 announcementID, global::System.String title, global::System.Byte recStatus, global::System.DateTime expirydate, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             Announcement announcement = new Announcement();
-            announcement.AnnouncementId = announcementId;
+            announcement.AnnouncementID = announcementID;
             announcement.Title = title;
             announcement.RecStatus = recStatus;
             announcement.Expirydate = expirydate;
+            announcement.CreatedBy = createdBy;
             announcement.CreatedDate = createdDate;
             return announcement;
         }
@@ -603,27 +560,27 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid AnnouncementId
+        public global::System.Int32 AnnouncementID
         {
             get
             {
-                return _AnnouncementId;
+                return _AnnouncementID;
             }
             set
             {
-                if (_AnnouncementId != value)
+                if (_AnnouncementID != value)
                 {
-                    OnAnnouncementIdChanging(value);
-                    ReportPropertyChanging("AnnouncementId");
-                    _AnnouncementId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AnnouncementId");
-                    OnAnnouncementIdChanged();
+                    OnAnnouncementIDChanging(value);
+                    ReportPropertyChanging("AnnouncementID");
+                    _AnnouncementID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("AnnouncementID");
+                    OnAnnouncementIDChanged();
                 }
             }
         }
-        private global::System.Guid _AnnouncementId;
-        partial void OnAnnouncementIdChanging(global::System.Guid value);
-        partial void OnAnnouncementIdChanged();
+        private global::System.Int32 _AnnouncementID;
+        partial void OnAnnouncementIDChanging(global::System.Int32 value);
+        partial void OnAnnouncementIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -700,6 +657,30 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ImageID
+        {
+            get
+            {
+                return _ImageID;
+            }
+            set
+            {
+                OnImageIDChanging(value);
+                ReportPropertyChanging("ImageID");
+                _ImageID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ImageID");
+                OnImageIDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ImageID;
+        partial void OnImageIDChanging(Nullable<global::System.Int32> value);
+        partial void OnImageIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.DateTime Expirydate
@@ -726,6 +707,30 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Guid CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime CreatedDate
         {
             get
@@ -744,6 +749,30 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -780,7 +809,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Announcem__Creat__2C3393D0", "User")]
-        public User CreatedBy
+        public User User
         {
             get
             {
@@ -796,7 +825,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> UserReference
         {
             get
             {
@@ -817,8 +846,46 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Announcem__Image__2B3F6F97", "ImageMaster")]
+        public ImageMaster ImageMaster
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__Announcem__Image__2B3F6F97", "ImageMaster").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__Announcem__Image__2B3F6F97", "ImageMaster").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<ImageMaster> ImageMasterReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__Announcem__Image__2B3F6F97", "ImageMaster");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ImageMaster>("SkillGapModel.FK__Announcem__Image__2B3F6F97", "ImageMaster", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Announcem__Modif__2D27B809", "User")]
-        public User ModifiedBy
+        public User User1
         {
             get
             {
@@ -834,7 +901,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -845,44 +912,6 @@ namespace iConnect.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__Announcem__Modif__2D27B809", "User", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_Announcement_ImageMaster", "ImageMaster")]
-        public ImageMaster ImageMaster
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK_Announcement_ImageMaster", "ImageMaster").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK_Announcement_ImageMaster", "ImageMaster").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ImageMaster> ImageMasterReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK_Announcement_ImageMaster", "ImageMaster");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ImageMaster>("SkillGapModel.FK_Announcement_ImageMaster", "ImageMaster", value);
                 }
             }
         }
@@ -907,14 +936,16 @@ namespace iConnect.DataAccess
         /// <param name="subject">Initial value of the Subject property.</param>
         /// <param name="expiryDate">Initial value of the ExpiryDate property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static DiscussionBoard CreateDiscussionBoard(global::System.Guid discussionBoardID, global::System.String subject, global::System.DateTime expiryDate, global::System.Byte recStatus, global::System.DateTime createdDate)
+        public static DiscussionBoard CreateDiscussionBoard(global::System.Int32 discussionBoardID, global::System.String subject, global::System.DateTime expiryDate, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             DiscussionBoard discussionBoard = new DiscussionBoard();
             discussionBoard.DiscussionBoardID = discussionBoardID;
             discussionBoard.Subject = subject;
             discussionBoard.ExpiryDate = expiryDate;
             discussionBoard.RecStatus = recStatus;
+            discussionBoard.CreatedBy = createdBy;
             discussionBoard.CreatedDate = createdDate;
             return discussionBoard;
         }
@@ -927,7 +958,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid DiscussionBoardID
+        public global::System.Int32 DiscussionBoardID
         {
             get
             {
@@ -945,8 +976,8 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Guid _DiscussionBoardID;
-        partial void OnDiscussionBoardIDChanging(global::System.Guid value);
+        private global::System.Int32 _DiscussionBoardID;
+        partial void OnDiscussionBoardIDChanging(global::System.Int32 value);
         partial void OnDiscussionBoardIDChanged();
     
         /// <summary>
@@ -1026,6 +1057,30 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Guid CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime CreatedDate
         {
             get
@@ -1044,6 +1099,30 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1080,7 +1159,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Discussio__Creat__36B12243", "User")]
-        public User CreatedBy
+        public User User
         {
             get
             {
@@ -1096,7 +1175,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> UserReference
         {
             get
             {
@@ -1117,8 +1196,30 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Discussio__Discu__3C69FB99", "DiscussionDetail")]
+        public EntityCollection<DiscussionDetail> DiscussionDetail
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DiscussionDetail>("SkillGapModel.FK__Discussio__Discu__3C69FB99", "DiscussionDetail");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DiscussionDetail>("SkillGapModel.FK__Discussio__Discu__3C69FB99", "DiscussionDetail", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Discussio__Modif__37A5467C", "User")]
-        public User ModifiedBy
+        public User User1
         {
             get
             {
@@ -1134,7 +1235,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -1145,28 +1246,6 @@ namespace iConnect.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__Discussio__Modif__37A5467C", "User", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionBoard", "DiscussionDetail")]
-        public EntityCollection<DiscussionDetail> DiscussionDetail
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionBoard", "DiscussionDetail");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionBoard", "DiscussionDetail", value);
                 }
             }
         }
@@ -1188,15 +1267,19 @@ namespace iConnect.DataAccess
         /// Create a new DiscussionDetail object.
         /// </summary>
         /// <param name="discussionDetailID">Initial value of the DiscussionDetailID property.</param>
+        /// <param name="discussionBoardID">Initial value of the DiscussionBoardID property.</param>
         /// <param name="discussionText">Initial value of the DiscussionText property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static DiscussionDetail CreateDiscussionDetail(global::System.Guid discussionDetailID, global::System.String discussionText, global::System.Byte recStatus, global::System.DateTime createdDate)
+        public static DiscussionDetail CreateDiscussionDetail(global::System.Int32 discussionDetailID, global::System.Int32 discussionBoardID, global::System.String discussionText, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             DiscussionDetail discussionDetail = new DiscussionDetail();
             discussionDetail.DiscussionDetailID = discussionDetailID;
+            discussionDetail.DiscussionBoardID = discussionBoardID;
             discussionDetail.DiscussionText = discussionText;
             discussionDetail.RecStatus = recStatus;
+            discussionDetail.CreatedBy = createdBy;
             discussionDetail.CreatedDate = createdDate;
             return discussionDetail;
         }
@@ -1209,7 +1292,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid DiscussionDetailID
+        public global::System.Int32 DiscussionDetailID
         {
             get
             {
@@ -1227,16 +1310,40 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Guid _DiscussionDetailID;
-        partial void OnDiscussionDetailIDChanging(global::System.Guid value);
+        private global::System.Int32 _DiscussionDetailID;
+        partial void OnDiscussionDetailIDChanging(global::System.Int32 value);
         partial void OnDiscussionDetailIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 DiscussionBoardID
+        {
+            get
+            {
+                return _DiscussionBoardID;
+            }
+            set
+            {
+                OnDiscussionBoardIDChanging(value);
+                ReportPropertyChanging("DiscussionBoardID");
+                _DiscussionBoardID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DiscussionBoardID");
+                OnDiscussionBoardIDChanged();
+            }
+        }
+        private global::System.Int32 _DiscussionBoardID;
+        partial void OnDiscussionBoardIDChanging(global::System.Int32 value);
+        partial void OnDiscussionBoardIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Guid> DicussionParentID
+        public Nullable<global::System.Int32> DicussionParentID
         {
             get
             {
@@ -1251,8 +1358,8 @@ namespace iConnect.DataAccess
                 OnDicussionParentIDChanged();
             }
         }
-        private Nullable<global::System.Guid> _DicussionParentID;
-        partial void OnDicussionParentIDChanging(Nullable<global::System.Guid> value);
+        private Nullable<global::System.Int32> _DicussionParentID;
+        partial void OnDicussionParentIDChanging(Nullable<global::System.Int32> value);
         partial void OnDicussionParentIDChanged();
     
         /// <summary>
@@ -1308,6 +1415,30 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Guid CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime CreatedDate
         {
             get
@@ -1326,6 +1457,30 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1361,16 +1516,16 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionBoard", "DiscussionBoard")]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Discussio__Discu__3C69FB99", "DiscussionBoard")]
         public DiscussionBoard DiscussionBoard
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionBoard>("SkillGapModel.FK_DiscussionDetail_DiscussionBoard", "DiscussionBoard").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionBoard>("SkillGapModel.FK__Discussio__Discu__3C69FB99", "DiscussionBoard").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionBoard>("SkillGapModel.FK_DiscussionDetail_DiscussionBoard", "DiscussionBoard").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionBoard>("SkillGapModel.FK__Discussio__Discu__3C69FB99", "DiscussionBoard").Value = value;
             }
         }
         /// <summary>
@@ -1382,13 +1537,13 @@ namespace iConnect.DataAccess
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionBoard>("SkillGapModel.FK_DiscussionDetail_DiscussionBoard", "DiscussionBoard");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionBoard>("SkillGapModel.FK__Discussio__Discu__3C69FB99", "DiscussionBoard");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DiscussionBoard>("SkillGapModel.FK_DiscussionDetail_DiscussionBoard", "DiscussionBoard", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DiscussionBoard>("SkillGapModel.FK__Discussio__Discu__3C69FB99", "DiscussionBoard", value);
                 }
             }
         }
@@ -1400,7 +1555,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Discussio__Creat__3D5E1FD2", "User")]
-        public User CreatedBy
+        public User User
         {
             get
             {
@@ -1416,7 +1571,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> UserReference
         {
             get
             {
@@ -1438,7 +1593,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Discussio__Modif__3E52440B", "User")]
-        public User ModifiedBy
+        public User User1
         {
             get
             {
@@ -1454,7 +1609,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -1475,34 +1630,18 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail1")]
-        public DiscussionDetail DiscussionDetailChild
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail1")]
+        public EntityCollection<DiscussionDetail> DiscussionDetail1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail1").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail1").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<DiscussionDetail> DiscussionDetailChildReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail1");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail1");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail1", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail1", value);
                 }
             }
         }
@@ -1513,16 +1652,16 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail")]
-        public DiscussionDetail DiscussionDetailParent
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail")]
+        public DiscussionDetail DiscussionDetail2
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail").Value = value;
             }
         }
         /// <summary>
@@ -1530,17 +1669,17 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<DiscussionDetail> DiscussionDetailParentReference
+        public EntityReference<DiscussionDetail> DiscussionDetail2Reference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail1", "DiscussionDetail", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DiscussionDetail>("SkillGapModel.FK_DiscussionDetail_DiscussionDetail", "DiscussionDetail", value);
                 }
             }
         }
@@ -1562,17 +1701,17 @@ namespace iConnect.DataAccess
         /// Create a new ImageMaster object.
         /// </summary>
         /// <param name="imageID">Initial value of the ImageID property.</param>
-        /// <param name="imageName">Initial value of the ImageName property.</param>
-        /// <param name="image">Initial value of the Image property.</param>
+        /// <param name="uploadedTime">Initial value of the UploadedTime property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static ImageMaster CreateImageMaster(global::System.Guid imageID, global::System.String imageName, global::System.Byte[] image, global::System.Byte recStatus, global::System.DateTime createdDate)
+        public static ImageMaster CreateImageMaster(global::System.Int32 imageID, global::System.DateTime uploadedTime, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             ImageMaster imageMaster = new ImageMaster();
             imageMaster.ImageID = imageID;
-            imageMaster.ImageName = imageName;
-            imageMaster.Image = image;
+            imageMaster.UploadedTime = uploadedTime;
             imageMaster.RecStatus = recStatus;
+            imageMaster.CreatedBy = createdBy;
             imageMaster.CreatedDate = createdDate;
             return imageMaster;
         }
@@ -1585,7 +1724,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid ImageID
+        public global::System.Int32 ImageID
         {
             get
             {
@@ -1603,14 +1742,14 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Guid _ImageID;
-        partial void OnImageIDChanging(global::System.Guid value);
+        private global::System.Int32 _ImageID;
+        partial void OnImageIDChanging(global::System.Int32 value);
         partial void OnImageIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String ImageName
         {
@@ -1622,7 +1761,7 @@ namespace iConnect.DataAccess
             {
                 OnImageNameChanging(value);
                 ReportPropertyChanging("ImageName");
-                _ImageName = StructuralObject.SetValidValue(value, false);
+                _ImageName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ImageName");
                 OnImageNameChanged();
             }
@@ -1634,7 +1773,7 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.Byte[] Image
         {
@@ -1646,7 +1785,7 @@ namespace iConnect.DataAccess
             {
                 OnImageChanging(value);
                 ReportPropertyChanging("Image");
-                _Image = StructuralObject.SetValidValue(value, false);
+                _Image = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Image");
                 OnImageChanged();
             }
@@ -1654,6 +1793,30 @@ namespace iConnect.DataAccess
         private global::System.Byte[] _Image;
         partial void OnImageChanging(global::System.Byte[] value);
         partial void OnImageChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime UploadedTime
+        {
+            get
+            {
+                return _UploadedTime;
+            }
+            set
+            {
+                OnUploadedTimeChanging(value);
+                ReportPropertyChanging("UploadedTime");
+                _UploadedTime = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UploadedTime");
+                OnUploadedTimeChanged();
+            }
+        }
+        private global::System.DateTime _UploadedTime;
+        partial void OnUploadedTimeChanging(global::System.DateTime value);
+        partial void OnUploadedTimeChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1684,6 +1847,30 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Guid CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime CreatedDate
         {
             get
@@ -1702,6 +1889,30 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1737,18 +1948,18 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_Announcement_ImageMaster", "Announcement")]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Announcem__Image__2B3F6F97", "Announcement")]
         public EntityCollection<Announcement> Announcement
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Announcement>("SkillGapModel.FK_Announcement_ImageMaster", "Announcement");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Announcement>("SkillGapModel.FK__Announcem__Image__2B3F6F97", "Announcement");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Announcement>("SkillGapModel.FK_Announcement_ImageMaster", "Announcement", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Announcement>("SkillGapModel.FK__Announcem__Image__2B3F6F97", "Announcement", value);
                 }
             }
         }
@@ -1760,7 +1971,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__ImageMast__Creat__25869641", "User")]
-        public User CreatedBy
+        public User User
         {
             get
             {
@@ -1776,7 +1987,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> UserReference
         {
             get
             {
@@ -1798,7 +2009,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__ImageMast__Modif__267ABA7A", "User")]
-        public User ModifiedBy
+        public User User1
         {
             get
             {
@@ -1814,7 +2025,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -1835,18 +2046,18 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PhotoGall__Image__373B3228", "PhotoGallery")]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PhotoGall__Image__31EC6D26", "PhotoGallery")]
         public EntityCollection<PhotoGallery> PhotoGallery
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PhotoGallery>("SkillGapModel.FK__PhotoGall__Image__373B3228", "PhotoGallery");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PhotoGallery>("SkillGapModel.FK__PhotoGall__Image__31EC6D26", "PhotoGallery");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PhotoGallery>("SkillGapModel.FK__PhotoGall__Image__373B3228", "PhotoGallery", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PhotoGallery>("SkillGapModel.FK__PhotoGall__Image__31EC6D26", "PhotoGallery", value);
                 }
             }
         }
@@ -1870,19 +2081,19 @@ namespace iConnect.DataAccess
         /// <param name="meetingRoomID">Initial value of the MeetingRoomID property.</param>
         /// <param name="phase">Initial value of the Phase property.</param>
         /// <param name="floor">Initial value of the Floor property.</param>
+        /// <param name="wing">Initial value of the Wing property.</param>
         /// <param name="roomName">Initial value of the RoomName property.</param>
-        /// <param name="projectorInfo">Initial value of the ProjectorInfo property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
         /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static MeetingRoom CreateMeetingRoom(global::System.Guid meetingRoomID, global::System.String phase, global::System.String floor, global::System.String roomName, global::System.Boolean projectorInfo, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
+        public static MeetingRoom CreateMeetingRoom(global::System.Int32 meetingRoomID, global::System.String phase, global::System.String floor, global::System.String wing, global::System.String roomName, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             MeetingRoom meetingRoom = new MeetingRoom();
             meetingRoom.MeetingRoomID = meetingRoomID;
             meetingRoom.Phase = phase;
             meetingRoom.Floor = floor;
+            meetingRoom.Wing = wing;
             meetingRoom.RoomName = roomName;
-            meetingRoom.ProjectorInfo = projectorInfo;
             meetingRoom.RecStatus = recStatus;
             meetingRoom.CreatedBy = createdBy;
             meetingRoom.CreatedDate = createdDate;
@@ -1897,7 +2108,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid MeetingRoomID
+        public global::System.Int32 MeetingRoomID
         {
             get
             {
@@ -1915,14 +2126,14 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Guid _MeetingRoomID;
-        partial void OnMeetingRoomIDChanging(global::System.Guid value);
+        private global::System.Int32 _MeetingRoomID;
+        partial void OnMeetingRoomIDChanging(global::System.Int32 value);
         partial void OnMeetingRoomIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Phase
         {
@@ -1932,14 +2143,11 @@ namespace iConnect.DataAccess
             }
             set
             {
-                if (_Phase != value)
-                {
-                    OnPhaseChanging(value);
-                    ReportPropertyChanging("Phase");
-                    _Phase = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("Phase");
-                    OnPhaseChanged();
-                }
+                OnPhaseChanging(value);
+                ReportPropertyChanging("Phase");
+                _Phase = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Phase");
+                OnPhaseChanged();
             }
         }
         private global::System.String _Phase;
@@ -1949,7 +2157,7 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Floor
         {
@@ -1959,14 +2167,11 @@ namespace iConnect.DataAccess
             }
             set
             {
-                if (_Floor != value)
-                {
-                    OnFloorChanging(value);
-                    ReportPropertyChanging("Floor");
-                    _Floor = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("Floor");
-                    OnFloorChanged();
-                }
+                OnFloorChanging(value);
+                ReportPropertyChanging("Floor");
+                _Floor = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Floor");
+                OnFloorChanged();
             }
         }
         private global::System.String _Floor;
@@ -1976,7 +2181,7 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Wing
         {
@@ -1988,7 +2193,7 @@ namespace iConnect.DataAccess
             {
                 OnWingChanging(value);
                 ReportPropertyChanging("Wing");
-                _Wing = StructuralObject.SetValidValue(value, true);
+                _Wing = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Wing");
                 OnWingChanged();
             }
@@ -2000,7 +2205,7 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String RoomName
         {
@@ -2010,14 +2215,11 @@ namespace iConnect.DataAccess
             }
             set
             {
-                if (_RoomName != value)
-                {
-                    OnRoomNameChanging(value);
-                    ReportPropertyChanging("RoomName");
-                    _RoomName = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("RoomName");
-                    OnRoomNameChanged();
-                }
+                OnRoomNameChanging(value);
+                ReportPropertyChanging("RoomName");
+                _RoomName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("RoomName");
+                OnRoomNameChanged();
             }
         }
         private global::System.String _RoomName;
@@ -2051,9 +2253,9 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Boolean ProjectorInfo
+        public global::System.String ProjectorInfo
         {
             get
             {
@@ -2061,24 +2263,21 @@ namespace iConnect.DataAccess
             }
             set
             {
-                if (_ProjectorInfo != value)
-                {
-                    OnProjectorInfoChanging(value);
-                    ReportPropertyChanging("ProjectorInfo");
-                    _ProjectorInfo = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ProjectorInfo");
-                    OnProjectorInfoChanged();
-                }
+                OnProjectorInfoChanging(value);
+                ReportPropertyChanging("ProjectorInfo");
+                _ProjectorInfo = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("ProjectorInfo");
+                OnProjectorInfoChanged();
             }
         }
-        private global::System.Boolean _ProjectorInfo;
-        partial void OnProjectorInfoChanging(global::System.Boolean value);
+        private global::System.String _ProjectorInfo;
+        partial void OnProjectorInfoChanging(global::System.String value);
         partial void OnProjectorInfoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Byte RecStatus
         {
@@ -2088,14 +2287,11 @@ namespace iConnect.DataAccess
             }
             set
             {
-                if (_RecStatus != value)
-                {
-                    OnRecStatusChanging(value);
-                    ReportPropertyChanging("RecStatus");
-                    _RecStatus = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("RecStatus");
-                    OnRecStatusChanged();
-                }
+                OnRecStatusChanging(value);
+                ReportPropertyChanging("RecStatus");
+                _RecStatus = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RecStatus");
+                OnRecStatusChanged();
             }
         }
         private global::System.Byte _RecStatus;
@@ -2105,7 +2301,7 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Guid CreatedBy
         {
@@ -2115,14 +2311,11 @@ namespace iConnect.DataAccess
             }
             set
             {
-                if (_CreatedBy != value)
-                {
-                    OnCreatedByChanging(value);
-                    ReportPropertyChanging("CreatedBy");
-                    _CreatedBy = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("CreatedBy");
-                    OnCreatedByChanged();
-                }
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
             }
         }
         private global::System.Guid _CreatedBy;
@@ -2132,7 +2325,7 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.DateTime CreatedDate
         {
@@ -2142,19 +2335,40 @@ namespace iConnect.DataAccess
             }
             set
             {
-                if (_CreatedDate != value)
-                {
-                    OnCreatedDateChanging(value);
-                    ReportPropertyChanging("CreatedDate");
-                    _CreatedDate = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("CreatedDate");
-                    OnCreatedDateChanged();
-                }
+                OnCreatedDateChanging(value);
+                ReportPropertyChanging("CreatedDate");
+                _CreatedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedDate");
+                OnCreatedDateChanged();
             }
         }
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2229,7 +2443,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__MeetingRo__Modif__5812160E", "User")]
-        public User ModifiedBy
+        public User User1
         {
             get
             {
@@ -2245,7 +2459,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -2481,13 +2695,15 @@ namespace iConnect.DataAccess
         /// Create a new MenuTabs object.
         /// </summary>
         /// <param name="menuWidgetID">Initial value of the MenuWidgetID property.</param>
+        /// <param name="menuID">Initial value of the MenuID property.</param>
         /// <param name="widgetName">Initial value of the WidgetName property.</param>
         /// <param name="widgetURL">Initial value of the WidgetURL property.</param>
         /// <param name="displayOrder">Initial value of the DisplayOrder property.</param>
-        public static MenuTabs CreateMenuTabs(global::System.Guid menuWidgetID, global::System.String widgetName, global::System.String widgetURL, global::System.Byte displayOrder)
+        public static MenuTabs CreateMenuTabs(global::System.Guid menuWidgetID, global::System.String menuID, global::System.String widgetName, global::System.String widgetURL, global::System.Byte displayOrder)
         {
             MenuTabs menuTabs = new MenuTabs();
             menuTabs.MenuWidgetID = menuWidgetID;
+            menuTabs.MenuID = menuID;
             menuTabs.WidgetName = widgetName;
             menuTabs.WidgetURL = widgetURL;
             menuTabs.DisplayOrder = displayOrder;
@@ -2523,6 +2739,30 @@ namespace iConnect.DataAccess
         private global::System.Guid _MenuWidgetID;
         partial void OnMenuWidgetIDChanging(global::System.Guid value);
         partial void OnMenuWidgetIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String MenuID
+        {
+            get
+            {
+                return _MenuID;
+            }
+            set
+            {
+                OnMenuIDChanging(value);
+                ReportPropertyChanging("MenuID");
+                _MenuID = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("MenuID");
+                OnMenuIDChanged();
+            }
+        }
+        private global::System.String _MenuID;
+        partial void OnMenuIDChanging(global::System.String value);
+        partial void OnMenuIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2678,7 +2918,7 @@ namespace iConnect.DataAccess
         /// </summary>
         /// <param name="photoGalleryID">Initial value of the PhotoGalleryID property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
-        public static PhotoGallery CreatePhotoGallery(global::System.Int32 photoGalleryID, global::System.Byte recStatus)
+        public static PhotoGallery CreatePhotoGallery(global::System.Guid photoGalleryID, global::System.Byte recStatus)
         {
             PhotoGallery photoGallery = new PhotoGallery();
             photoGallery.PhotoGalleryID = photoGalleryID;
@@ -2694,7 +2934,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PhotoGalleryID
+        public global::System.Guid PhotoGalleryID
         {
             get
             {
@@ -2712,8 +2952,8 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Int32 _PhotoGalleryID;
-        partial void OnPhotoGalleryIDChanging(global::System.Int32 value);
+        private global::System.Guid _PhotoGalleryID;
+        partial void OnPhotoGalleryIDChanging(global::System.Guid value);
         partial void OnPhotoGalleryIDChanged();
     
         /// <summary>
@@ -2739,6 +2979,30 @@ namespace iConnect.DataAccess
         private global::System.String _PhotoDescription;
         partial void OnPhotoDescriptionChanging(global::System.String value);
         partial void OnPhotoDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ImageID
+        {
+            get
+            {
+                return _ImageID;
+            }
+            set
+            {
+                OnImageIDChanging(value);
+                ReportPropertyChanging("ImageID");
+                _ImageID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ImageID");
+                OnImageIDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ImageID;
+        partial void OnImageIDChanging(Nullable<global::System.Int32> value);
+        partial void OnImageIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2798,16 +3062,16 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PhotoGall__Image__373B3228", "ImageMaster")]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PhotoGall__Image__31EC6D26", "ImageMaster")]
         public ImageMaster ImageMaster
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__373B3228", "ImageMaster").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__31EC6D26", "ImageMaster").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__373B3228", "ImageMaster").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__31EC6D26", "ImageMaster").Value = value;
             }
         }
         /// <summary>
@@ -2819,13 +3083,13 @@ namespace iConnect.DataAccess
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__373B3228", "ImageMaster");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__31EC6D26", "ImageMaster");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__373B3228", "ImageMaster", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ImageMaster>("SkillGapModel.FK__PhotoGall__Image__31EC6D26", "ImageMaster", value);
                 }
             }
         }
@@ -2848,14 +3112,18 @@ namespace iConnect.DataAccess
         /// </summary>
         /// <param name="pollID">Initial value of the PollID property.</param>
         /// <param name="pollQuestion">Initial value of the PollQuestion property.</param>
+        /// <param name="isActive">Initial value of the IsActive property.</param>
         /// <param name="recStatus">Initial value of the RecStatus property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static PollMaster CreatePollMaster(global::System.Guid pollID, global::System.String pollQuestion, global::System.Byte recStatus, global::System.DateTime createdDate)
+        public static PollMaster CreatePollMaster(global::System.Guid pollID, global::System.String pollQuestion, global::System.Boolean isActive, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             PollMaster pollMaster = new PollMaster();
             pollMaster.PollID = pollID;
             pollMaster.PollQuestion = pollQuestion;
+            pollMaster.IsActive = isActive;
             pollMaster.RecStatus = recStatus;
+            pollMaster.CreatedBy = createdBy;
             pollMaster.CreatedDate = createdDate;
             return pollMaster;
         }
@@ -2919,6 +3187,30 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Boolean IsActive
+        {
+            get
+            {
+                return _IsActive;
+            }
+            set
+            {
+                OnIsActiveChanging(value);
+                ReportPropertyChanging("IsActive");
+                _IsActive = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IsActive");
+                OnIsActiveChanged();
+            }
+        }
+        private global::System.Boolean _IsActive;
+        partial void OnIsActiveChanging(global::System.Boolean value);
+        partial void OnIsActiveChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.Byte RecStatus
         {
             get
@@ -2943,6 +3235,30 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Guid CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime CreatedDate
         {
             get
@@ -2961,6 +3277,30 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3034,16 +3374,16 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollMaster_User", "User")]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollMaste__Modif__440B1D61", "User")]
         public User User1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK_PollMaster_User", "User").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollMaste__Modif__440B1D61", "User").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK_PollMaster_User", "User").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollMaste__Modif__440B1D61", "User").Value = value;
             }
         }
         /// <summary>
@@ -3055,13 +3395,13 @@ namespace iConnect.DataAccess
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK_PollMaster_User", "User");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollMaste__Modif__440B1D61", "User");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK_PollMaster_User", "User", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__PollMaste__Modif__440B1D61", "User", value);
                 }
             }
         }
@@ -3072,18 +3412,18 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollOptions_PollMaster", "PollOptions")]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollOptio__PollI__48CFD27E", "PollOptions")]
         public EntityCollection<PollOptions> PollOptions
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollOptions>("SkillGapModel.FK_PollOptions_PollMaster", "PollOptions");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollOptions>("SkillGapModel.FK__PollOptio__PollI__48CFD27E", "PollOptions");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollOptions>("SkillGapModel.FK_PollOptions_PollMaster", "PollOptions", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollOptions>("SkillGapModel.FK__PollOptio__PollI__48CFD27E", "PollOptions", value);
                 }
             }
         }
@@ -3107,13 +3447,19 @@ namespace iConnect.DataAccess
         /// <param name="pollOptionID">Initial value of the PollOptionID property.</param>
         /// <param name="pollID">Initial value of the PollID property.</param>
         /// <param name="pollOption">Initial value of the PollOption property.</param>
+        /// <param name="optionOrder">Initial value of the OptionOrder property.</param>
+        /// <param name="recStatus">Initial value of the RecStatus property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static PollOptions CreatePollOptions(global::System.Guid pollOptionID, global::System.Guid pollID, global::System.String pollOption, global::System.DateTime createdDate)
+        public static PollOptions CreatePollOptions(global::System.Int32 pollOptionID, global::System.Guid pollID, global::System.String pollOption, global::System.Byte optionOrder, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             PollOptions pollOptions = new PollOptions();
             pollOptions.PollOptionID = pollOptionID;
             pollOptions.PollID = pollID;
             pollOptions.PollOption = pollOption;
+            pollOptions.OptionOrder = optionOrder;
+            pollOptions.RecStatus = recStatus;
+            pollOptions.CreatedBy = createdBy;
             pollOptions.CreatedDate = createdDate;
             return pollOptions;
         }
@@ -3126,7 +3472,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid PollOptionID
+        public global::System.Int32 PollOptionID
         {
             get
             {
@@ -3144,8 +3490,8 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Guid _PollOptionID;
-        partial void OnPollOptionIDChanging(global::System.Guid value);
+        private global::System.Int32 _PollOptionID;
+        partial void OnPollOptionIDChanging(global::System.Int32 value);
         partial void OnPollOptionIDChanged();
     
         /// <summary>
@@ -3201,6 +3547,78 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Byte OptionOrder
+        {
+            get
+            {
+                return _OptionOrder;
+            }
+            set
+            {
+                OnOptionOrderChanging(value);
+                ReportPropertyChanging("OptionOrder");
+                _OptionOrder = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OptionOrder");
+                OnOptionOrderChanged();
+            }
+        }
+        private global::System.Byte _OptionOrder;
+        partial void OnOptionOrderChanging(global::System.Byte value);
+        partial void OnOptionOrderChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte RecStatus
+        {
+            get
+            {
+                return _RecStatus;
+            }
+            set
+            {
+                OnRecStatusChanging(value);
+                ReportPropertyChanging("RecStatus");
+                _RecStatus = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RecStatus");
+                OnRecStatusChanged();
+            }
+        }
+        private global::System.Byte _RecStatus;
+        partial void OnRecStatusChanging(global::System.Byte value);
+        partial void OnRecStatusChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime CreatedDate
         {
             get
@@ -3219,6 +3637,54 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ModifiedDate
+        {
+            get
+            {
+                return _ModifiedDate;
+            }
+            set
+            {
+                OnModifiedDateChanging(value);
+                ReportPropertyChanging("ModifiedDate");
+                _ModifiedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedDate");
+                OnModifiedDateChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ModifiedDate;
+        partial void OnModifiedDateChanging(Nullable<global::System.DateTime> value);
+        partial void OnModifiedDateChanged();
 
         #endregion
     
@@ -3230,8 +3696,46 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollOptio__PollI__48CFD27E", "PollMaster")]
+        public PollMaster PollMaster
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK__PollOptio__PollI__48CFD27E", "PollMaster").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK__PollOptio__PollI__48CFD27E", "PollMaster").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<PollMaster> PollMasterReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK__PollOptio__PollI__48CFD27E", "PollMaster");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PollMaster>("SkillGapModel.FK__PollOptio__PollI__48CFD27E", "PollMaster", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollOptio__Creat__49C3F6B7", "User")]
-        public User CreatedBy
+        public User User
         {
             get
             {
@@ -3247,7 +3751,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> UserReference
         {
             get
             {
@@ -3268,18 +3772,34 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__UserI__4F7CD00D", "PollResults")]
-        public EntityCollection<PollResults> PollResults
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollOptio__Modif__4AB81AF0", "User")]
+        public User User1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollResults");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollOptio__Modif__4AB81AF0", "User").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollOptio__Modif__4AB81AF0", "User").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<User> User1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollOptio__Modif__4AB81AF0", "User");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollResults", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__PollOptio__Modif__4AB81AF0", "User", value);
                 }
             }
         }
@@ -3290,34 +3810,18 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollOptions_PollMaster", "PollMaster")]
-        public PollMaster PollMaster
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__PollO__5070F446", "PollResults")]
+        public EntityCollection<PollResults> PollResults
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<PollMaster> PollMasterReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__PollO__5070F446", "PollResults");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PollMaster>("SkillGapModel.FK_PollOptions_PollMaster", "PollMaster", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__PollO__5070F446", "PollResults", value);
                 }
             }
         }
@@ -3340,13 +3844,17 @@ namespace iConnect.DataAccess
         /// </summary>
         /// <param name="pollResultID">Initial value of the PollResultID property.</param>
         /// <param name="userID">Initial value of the UserID property.</param>
-        /// <param name="polledDate">Initial value of the PolledDate property.</param>
-        public static PollResults CreatePollResults(global::System.Int32 pollResultID, global::System.Guid userID, global::System.DateTime polledDate)
+        /// <param name="pollOptionID">Initial value of the PollOptionID property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
+        /// <param name="createdDate">Initial value of the CreatedDate property.</param>
+        public static PollResults CreatePollResults(global::System.Int32 pollResultID, global::System.Guid userID, global::System.Int32 pollOptionID, global::System.Guid createdBy, global::System.DateTime createdDate)
         {
             PollResults pollResults = new PollResults();
             pollResults.PollResultID = pollResultID;
             pollResults.UserID = userID;
-            pollResults.PolledDate = polledDate;
+            pollResults.PollOptionID = pollOptionID;
+            pollResults.CreatedBy = createdBy;
+            pollResults.CreatedDate = createdDate;
             return pollResults;
         }
 
@@ -3409,200 +3917,48 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime PolledDate
+        public global::System.Int32 PollOptionID
         {
             get
             {
-                return _PolledDate;
+                return _PollOptionID;
             }
             set
             {
-                OnPolledDateChanging(value);
-                ReportPropertyChanging("PolledDate");
-                _PolledDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PolledDate");
-                OnPolledDateChanged();
+                OnPollOptionIDChanging(value);
+                ReportPropertyChanging("PollOptionID");
+                _PollOptionID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PollOptionID");
+                OnPollOptionIDChanged();
             }
         }
-        private global::System.DateTime _PolledDate;
-        partial void OnPolledDateChanging(global::System.DateTime value);
-        partial void OnPolledDateChanged();
-
-        #endregion
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__UserI__4F7CD00D", "PollOptions")]
-        public PollOptions PollOptions
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollOptions").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollOptions").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<PollOptions> PollOptionsReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollOptions");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollOptions", value);
-                }
-            }
-        }
-
-        #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="QuickLink")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class QuickLink : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new QuickLink object.
-        /// </summary>
-        /// <param name="quickLinkID">Initial value of the QuickLinkID property.</param>
-        /// <param name="uRL">Initial value of the URL property.</param>
-        /// <param name="displayForAll">Initial value of the DisplayForAll property.</param>
-        /// <param name="recStatus">Initial value of the RecStatus property.</param>
-        /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static QuickLink CreateQuickLink(global::System.Guid quickLinkID, global::System.String uRL, global::System.Boolean displayForAll, global::System.Byte recStatus, global::System.DateTime createdDate)
-        {
-            QuickLink quickLink = new QuickLink();
-            quickLink.QuickLinkID = quickLinkID;
-            quickLink.URL = uRL;
-            quickLink.DisplayForAll = displayForAll;
-            quickLink.RecStatus = recStatus;
-            quickLink.CreatedDate = createdDate;
-            return quickLink;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid QuickLinkID
-        {
-            get
-            {
-                return _QuickLinkID;
-            }
-            set
-            {
-                if (_QuickLinkID != value)
-                {
-                    OnQuickLinkIDChanging(value);
-                    ReportPropertyChanging("QuickLinkID");
-                    _QuickLinkID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("QuickLinkID");
-                    OnQuickLinkIDChanged();
-                }
-            }
-        }
-        private global::System.Guid _QuickLinkID;
-        partial void OnQuickLinkIDChanging(global::System.Guid value);
-        partial void OnQuickLinkIDChanged();
+        private global::System.Int32 _PollOptionID;
+        partial void OnPollOptionIDChanging(global::System.Int32 value);
+        partial void OnPollOptionIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String URL
+        public global::System.Guid CreatedBy
         {
             get
             {
-                return _URL;
+                return _CreatedBy;
             }
             set
             {
-                OnURLChanging(value);
-                ReportPropertyChanging("URL");
-                _URL = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("URL");
-                OnURLChanged();
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
             }
         }
-        private global::System.String _URL;
-        partial void OnURLChanging(global::System.String value);
-        partial void OnURLChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Boolean DisplayForAll
-        {
-            get
-            {
-                return _DisplayForAll;
-            }
-            set
-            {
-                OnDisplayForAllChanging(value);
-                ReportPropertyChanging("DisplayForAll");
-                _DisplayForAll = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("DisplayForAll");
-                OnDisplayForAllChanged();
-            }
-        }
-        private global::System.Boolean _DisplayForAll;
-        partial void OnDisplayForAllChanging(global::System.Boolean value);
-        partial void OnDisplayForAllChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Byte RecStatus
-        {
-            get
-            {
-                return _RecStatus;
-            }
-            set
-            {
-                OnRecStatusChanging(value);
-                ReportPropertyChanging("RecStatus");
-                _RecStatus = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("RecStatus");
-                OnRecStatusChanged();
-            }
-        }
-        private global::System.Byte _RecStatus;
-        partial void OnRecStatusChanging(global::System.Byte value);
-        partial void OnRecStatusChanged();
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3627,6 +3983,30 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3662,8 +4042,434 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__PollO__5070F446", "PollOptions")]
+        public PollOptions PollOptions
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__PollO__5070F446", "PollOptions").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__PollO__5070F446", "PollOptions").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<PollOptions> PollOptionsReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__PollO__5070F446", "PollOptions");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PollOptions>("SkillGapModel.FK__PollResul__PollO__5070F446", "PollOptions", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__Creat__5165187F", "User")]
+        public User User
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__Creat__5165187F", "User").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__Creat__5165187F", "User").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<User> UserReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__Creat__5165187F", "User");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__PollResul__Creat__5165187F", "User", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__Modif__52593CB8", "User")]
+        public User User1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__Modif__52593CB8", "User").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__Modif__52593CB8", "User").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<User> User1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__Modif__52593CB8", "User");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__PollResul__Modif__52593CB8", "User", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__UserI__4F7CD00D", "User")]
+        public User User2
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "User").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "User").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<User> User2Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "User");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "User", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="QuickLink")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class QuickLink : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new QuickLink object.
+        /// </summary>
+        /// <param name="quickLinkID">Initial value of the QuickLinkID property.</param>
+        /// <param name="link">Initial value of the Link property.</param>
+        /// <param name="userID">Initial value of the UserID property.</param>
+        /// <param name="recStatus">Initial value of the RecStatus property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
+        /// <param name="createdDate">Initial value of the CreatedDate property.</param>
+        public static QuickLink CreateQuickLink(global::System.Int32 quickLinkID, global::System.String link, global::System.Guid userID, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
+        {
+            QuickLink quickLink = new QuickLink();
+            quickLink.QuickLinkID = quickLinkID;
+            quickLink.Link = link;
+            quickLink.UserID = userID;
+            quickLink.RecStatus = recStatus;
+            quickLink.CreatedBy = createdBy;
+            quickLink.CreatedDate = createdDate;
+            return quickLink;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 QuickLinkID
+        {
+            get
+            {
+                return _QuickLinkID;
+            }
+            set
+            {
+                if (_QuickLinkID != value)
+                {
+                    OnQuickLinkIDChanging(value);
+                    ReportPropertyChanging("QuickLinkID");
+                    _QuickLinkID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("QuickLinkID");
+                    OnQuickLinkIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _QuickLinkID;
+        partial void OnQuickLinkIDChanging(global::System.Int32 value);
+        partial void OnQuickLinkIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Link
+        {
+            get
+            {
+                return _Link;
+            }
+            set
+            {
+                OnLinkChanging(value);
+                ReportPropertyChanging("Link");
+                _Link = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Link");
+                OnLinkChanged();
+            }
+        }
+        private global::System.String _Link;
+        partial void OnLinkChanging(global::System.String value);
+        partial void OnLinkChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid UserID
+        {
+            get
+            {
+                return _UserID;
+            }
+            set
+            {
+                OnUserIDChanging(value);
+                ReportPropertyChanging("UserID");
+                _UserID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UserID");
+                OnUserIDChanged();
+            }
+        }
+        private global::System.Guid _UserID;
+        partial void OnUserIDChanging(global::System.Guid value);
+        partial void OnUserIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte RecStatus
+        {
+            get
+            {
+                return _RecStatus;
+            }
+            set
+            {
+                OnRecStatusChanging(value);
+                ReportPropertyChanging("RecStatus");
+                _RecStatus = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RecStatus");
+                OnRecStatusChanged();
+            }
+        }
+        private global::System.Byte _RecStatus;
+        partial void OnRecStatusChanging(global::System.Byte value);
+        partial void OnRecStatusChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.Guid _CreatedBy;
+        partial void OnCreatedByChanging(global::System.Guid value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CreatedDate
+        {
+            get
+            {
+                return _CreatedDate;
+            }
+            set
+            {
+                OnCreatedDateChanging(value);
+                ReportPropertyChanging("CreatedDate");
+                _CreatedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CreatedDate");
+                OnCreatedDateChanged();
+            }
+        }
+        private global::System.DateTime _CreatedDate;
+        partial void OnCreatedDateChanging(global::System.DateTime value);
+        partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> ModifiedDate
+        {
+            get
+            {
+                return _ModifiedDate;
+            }
+            set
+            {
+                OnModifiedDateChanging(value);
+                ReportPropertyChanging("ModifiedDate");
+                _ModifiedDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedDate");
+                OnModifiedDateChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _ModifiedDate;
+        partial void OnModifiedDateChanging(Nullable<global::System.DateTime> value);
+        partial void OnModifiedDateChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__QuickLink__Creat__5DCAEF64", "User")]
+        public User User
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__QuickLink__Creat__5DCAEF64", "User").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__QuickLink__Creat__5DCAEF64", "User").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<User> UserReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__QuickLink__Creat__5DCAEF64", "User");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__QuickLink__Creat__5DCAEF64", "User", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__QuickLink__Modif__5EBF139D", "User")]
-        public User CreatedBy
+        public User User1
         {
             get
             {
@@ -3679,7 +4485,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -3700,16 +4506,16 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_QuickLink_User", "User")]
-        public User ModifiedBy
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__QuickLink__UserI__5CD6CB2B", "User")]
+        public User User2
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK_QuickLink_User", "User").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__QuickLink__UserI__5CD6CB2B", "User").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK_QuickLink_User", "User").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__QuickLink__UserI__5CD6CB2B", "User").Value = value;
             }
         }
         /// <summary>
@@ -3717,17 +4523,17 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User2Reference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK_QuickLink_User", "User");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__QuickLink__UserI__5CD6CB2B", "User");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK_QuickLink_User", "User", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__QuickLink__UserI__5CD6CB2B", "User", value);
                 }
             }
         }
@@ -4194,30 +5000,185 @@ namespace iConnect.DataAccess
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="TimeZoneMaster")]
+    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="sysdiagrams")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class TimeZoneMaster : EntityObject
+    public partial class sysdiagrams : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new TimeZoneMaster object.
+        /// Create a new sysdiagrams object.
+        /// </summary>
+        /// <param name="name">Initial value of the name property.</param>
+        /// <param name="principal_id">Initial value of the principal_id property.</param>
+        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
+        public static sysdiagrams Createsysdiagrams(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
+        {
+            sysdiagrams sysdiagrams = new sysdiagrams();
+            sysdiagrams.name = name;
+            sysdiagrams.principal_id = principal_id;
+            sysdiagrams.diagram_id = diagram_id;
+            return sysdiagrams;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
+
+        #endregion
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="TimeZone")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class TimeZone : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new TimeZone object.
         /// </summary>
         /// <param name="timeZoneID">Initial value of the TimeZoneID property.</param>
         /// <param name="timeZoneName">Initial value of the TimeZoneName property.</param>
         /// <param name="displayName">Initial value of the DisplayName property.</param>
-        /// <param name="clockType">Initial value of the ClockType property.</param>
+        /// <param name="createdby">Initial value of the Createdby property.</param>
         /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static TimeZoneMaster CreateTimeZoneMaster(global::System.Guid timeZoneID, global::System.String timeZoneName, global::System.String displayName, global::System.Byte clockType, global::System.DateTime createdDate)
+        public static TimeZone CreateTimeZone(global::System.Int32 timeZoneID, global::System.String timeZoneName, global::System.String displayName, global::System.Guid createdby, global::System.DateTime createdDate)
         {
-            TimeZoneMaster timeZoneMaster = new TimeZoneMaster();
-            timeZoneMaster.TimeZoneID = timeZoneID;
-            timeZoneMaster.TimeZoneName = timeZoneName;
-            timeZoneMaster.DisplayName = displayName;
-            timeZoneMaster.ClockType = clockType;
-            timeZoneMaster.CreatedDate = createdDate;
-            return timeZoneMaster;
+            TimeZone timeZone = new TimeZone();
+            timeZone.TimeZoneID = timeZoneID;
+            timeZone.TimeZoneName = timeZoneName;
+            timeZone.DisplayName = displayName;
+            timeZone.Createdby = createdby;
+            timeZone.CreatedDate = createdDate;
+            return timeZone;
         }
 
         #endregion
@@ -4228,7 +5189,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Guid TimeZoneID
+        public global::System.Int32 TimeZoneID
         {
             get
             {
@@ -4246,8 +5207,8 @@ namespace iConnect.DataAccess
                 }
             }
         }
-        private global::System.Guid _TimeZoneID;
-        partial void OnTimeZoneIDChanging(global::System.Guid value);
+        private global::System.Int32 _TimeZoneID;
+        partial void OnTimeZoneIDChanging(global::System.Int32 value);
         partial void OnTimeZoneIDChanged();
     
         /// <summary>
@@ -4301,9 +5262,9 @@ namespace iConnect.DataAccess
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Byte ClockType
+        public global::System.String ClockType
         {
             get
             {
@@ -4313,14 +5274,62 @@ namespace iConnect.DataAccess
             {
                 OnClockTypeChanging(value);
                 ReportPropertyChanging("ClockType");
-                _ClockType = StructuralObject.SetValidValue(value);
+                _ClockType = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ClockType");
                 OnClockTypeChanged();
             }
         }
-        private global::System.Byte _ClockType;
-        partial void OnClockTypeChanging(global::System.Byte value);
+        private global::System.String _ClockType;
+        partial void OnClockTypeChanging(global::System.String value);
         partial void OnClockTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Byte> ClockOrder
+        {
+            get
+            {
+                return _ClockOrder;
+            }
+            set
+            {
+                OnClockOrderChanging(value);
+                ReportPropertyChanging("ClockOrder");
+                _ClockOrder = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ClockOrder");
+                OnClockOrderChanged();
+            }
+        }
+        private Nullable<global::System.Byte> _ClockOrder;
+        partial void OnClockOrderChanging(Nullable<global::System.Byte> value);
+        partial void OnClockOrderChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid Createdby
+        {
+            get
+            {
+                return _Createdby;
+            }
+            set
+            {
+                OnCreatedbyChanging(value);
+                ReportPropertyChanging("Createdby");
+                _Createdby = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Createdby");
+                OnCreatedbyChanged();
+            }
+        }
+        private global::System.Guid _Createdby;
+        partial void OnCreatedbyChanging(global::System.Guid value);
+        partial void OnCreatedbyChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4345,6 +5354,30 @@ namespace iConnect.DataAccess
         private global::System.DateTime _CreatedDate;
         partial void OnCreatedDateChanging(global::System.DateTime value);
         partial void OnCreatedDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Guid> ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private Nullable<global::System.Guid> _ModifiedBy;
+        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
+        partial void OnModifiedByChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4381,7 +5414,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__TimeZone__Create__22751F6C", "User")]
-        public User CreatedBy
+        public User User
         {
             get
             {
@@ -4397,7 +5430,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
+        public EntityReference<User> UserReference
         {
             get
             {
@@ -4419,7 +5452,7 @@ namespace iConnect.DataAccess
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__TimeZone__Modifi__236943A5", "User")]
-        public User ModifiedBy
+        public User User1
         {
             get
             {
@@ -4435,7 +5468,7 @@ namespace iConnect.DataAccess
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
+        public EntityReference<User> User1Reference
         {
             get
             {
@@ -4467,15 +5500,17 @@ namespace iConnect.DataAccess
         /// Create a new User object.
         /// </summary>
         /// <param name="userID">Initial value of the UserID property.</param>
+        /// <param name="roleID">Initial value of the RoleID property.</param>
         /// <param name="userName">Initial value of the UserName property.</param>
         /// <param name="aCENo">Initial value of the ACENo property.</param>
         /// <param name="password">Initial value of the Password property.</param>
         /// <param name="fName">Initial value of the FName property.</param>
         /// <param name="lName">Initial value of the LName property.</param>
-        public static User CreateUser(global::System.Guid userID, global::System.String userName, global::System.String aCENo, global::System.String password, global::System.String fName, global::System.String lName)
+        public static User CreateUser(global::System.Guid userID, global::System.Guid roleID, global::System.String userName, global::System.String aCENo, global::System.String password, global::System.String fName, global::System.String lName)
         {
             User user = new User();
             user.UserID = userID;
+            user.RoleID = roleID;
             user.UserName = userName;
             user.ACENo = aCENo;
             user.Password = password;
@@ -4513,6 +5548,30 @@ namespace iConnect.DataAccess
         private global::System.Guid _UserID;
         partial void OnUserIDChanging(global::System.Guid value);
         partial void OnUserIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid RoleID
+        {
+            get
+            {
+                return _RoleID;
+            }
+            set
+            {
+                OnRoleIDChanging(value);
+                ReportPropertyChanging("RoleID");
+                _RoleID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RoleID");
+                OnRoleIDChanged();
+            }
+        }
+        private global::System.Guid _RoleID;
+        partial void OnRoleIDChanging(global::System.Guid value);
+        partial void OnRoleIDChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4916,6 +5975,50 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "PollMaster")]
+        public EntityCollection<PollMaster> PollMaster
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollMaste__Modif__440B1D61", "PollMaster")]
+        public EntityCollection<PollMaster> PollMaster1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Modif__440B1D61", "PollMaster");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Modif__440B1D61", "PollMaster", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollOptio__Creat__49C3F6B7", "PollOptions")]
         public EntityCollection<PollOptions> PollOptions
         {
@@ -4928,6 +6031,160 @@ namespace iConnect.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollOptions>("SkillGapModel.FK__PollOptio__Creat__49C3F6B7", "PollOptions", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollOptio__Modif__4AB81AF0", "PollOptions")]
+        public EntityCollection<PollOptions> PollOptions1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollOptions>("SkillGapModel.FK__PollOptio__Modif__4AB81AF0", "PollOptions");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollOptions>("SkillGapModel.FK__PollOptio__Modif__4AB81AF0", "PollOptions", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__Creat__5165187F", "PollResults")]
+        public EntityCollection<PollResults> PollResults
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__Creat__5165187F", "PollResults");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__Creat__5165187F", "PollResults", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__Modif__52593CB8", "PollResults")]
+        public EntityCollection<PollResults> PollResults1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__Modif__52593CB8", "PollResults");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__Modif__52593CB8", "PollResults", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollResul__UserI__4F7CD00D", "PollResults")]
+        public EntityCollection<PollResults> PollResults2
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollResults");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollResults>("SkillGapModel.FK__PollResul__UserI__4F7CD00D", "PollResults", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__QuickLink__Creat__5DCAEF64", "QuickLink")]
+        public EntityCollection<QuickLink> QuickLink
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__Creat__5DCAEF64", "QuickLink");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__Creat__5DCAEF64", "QuickLink", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__QuickLink__Modif__5EBF139D", "QuickLink")]
+        public EntityCollection<QuickLink> QuickLink1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__Modif__5EBF139D", "QuickLink");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__Modif__5EBF139D", "QuickLink", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__QuickLink__UserI__5CD6CB2B", "QuickLink")]
+        public EntityCollection<QuickLink> QuickLink2
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__UserI__5CD6CB2B", "QuickLink");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__UserI__5CD6CB2B", "QuickLink", value);
                 }
             }
         }
@@ -4966,94 +6223,6 @@ namespace iConnect.DataAccess
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Role>("SkillGapModel.FK__User__RoleID__18EBB532", "Role", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__TimeZone__Create__22751F6C", "TimeZoneMaster")]
-        public EntityCollection<TimeZoneMaster> TimeZoneMaster
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TimeZoneMaster>("SkillGapModel.FK__TimeZone__Create__22751F6C", "TimeZoneMaster");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TimeZoneMaster>("SkillGapModel.FK__TimeZone__Create__22751F6C", "TimeZoneMaster", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__TimeZone__Modifi__236943A5", "TimeZoneMaster")]
-        public EntityCollection<TimeZoneMaster> TimeZoneMaster1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TimeZoneMaster>("SkillGapModel.FK__TimeZone__Modifi__236943A5", "TimeZoneMaster");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TimeZoneMaster>("SkillGapModel.FK__TimeZone__Modifi__236943A5", "TimeZoneMaster", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Weather__Creat__2C3393D0", "UserWeather")]
-        public EntityCollection<UserWeather> UserWeather
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<UserWeather>("SkillGapModel.FK__Weather__Creat__2C3393D0", "UserWeather");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<UserWeather>("SkillGapModel.FK__Weather__Creat__2C3393D0", "UserWeather", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Weather__Modif__2D27B809", "UserWeather")]
-        public EntityCollection<UserWeather> UserWeather1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<UserWeather>("SkillGapModel.FK__Weather__Modif__2D27B809", "UserWeather");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<UserWeather>("SkillGapModel.FK__Weather__Modif__2D27B809", "UserWeather", value);
                 }
             }
         }
@@ -5108,18 +6277,18 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__QuickLink__Modif__5EBF139D", "QuickLink")]
-        public EntityCollection<QuickLink> QuickLink
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__TimeZone__Create__22751F6C", "TimeZone")]
+        public EntityCollection<TimeZone> TimeZone
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__Modif__5EBF139D", "QuickLink");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TimeZone>("SkillGapModel.FK__TimeZone__Create__22751F6C", "TimeZone");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QuickLink>("SkillGapModel.FK__QuickLink__Modif__5EBF139D", "QuickLink", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TimeZone>("SkillGapModel.FK__TimeZone__Create__22751F6C", "TimeZone", value);
                 }
             }
         }
@@ -5130,821 +6299,23 @@ namespace iConnect.DataAccess
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_QuickLink_User", "QuickLink")]
-        public EntityCollection<QuickLink> QuickLink1
+        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__TimeZone__Modifi__236943A5", "TimeZone")]
+        public EntityCollection<TimeZone> TimeZone1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<QuickLink>("SkillGapModel.FK_QuickLink_User", "QuickLink");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TimeZone>("SkillGapModel.FK__TimeZone__Modifi__236943A5", "TimeZone");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<QuickLink>("SkillGapModel.FK_QuickLink_User", "QuickLink", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__PollMaste__Creat__4316F928", "PollMaster")]
-        public EntityCollection<PollMaster> PollMaster
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK__PollMaste__Creat__4316F928", "PollMaster", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK_PollMaster_User", "PollMaster")]
-        public EntityCollection<PollMaster> PollMaster1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PollMaster>("SkillGapModel.FK_PollMaster_User", "PollMaster");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PollMaster>("SkillGapModel.FK_PollMaster_User", "PollMaster", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TimeZone>("SkillGapModel.FK__TimeZone__Modifi__236943A5", "TimeZone", value);
                 }
             }
         }
 
         #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="UserTimeZone")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class UserTimeZone : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new UserTimeZone object.
-        /// </summary>
-        /// <param name="userTimeZoneId">Initial value of the UserTimeZoneId property.</param>
-        /// <param name="userId">Initial value of the UserId property.</param>
-        /// <param name="timeZoneId">Initial value of the TimeZoneId property.</param>
-        /// <param name="timeZoneOrder">Initial value of the TimeZoneOrder property.</param>
-        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
-        /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static UserTimeZone CreateUserTimeZone(global::System.Guid userTimeZoneId, global::System.Guid userId, global::System.Guid timeZoneId, global::System.Byte timeZoneOrder, global::System.Guid createdBy, global::System.DateTime createdDate)
-        {
-            UserTimeZone userTimeZone = new UserTimeZone();
-            userTimeZone.UserTimeZoneId = userTimeZoneId;
-            userTimeZone.UserId = userId;
-            userTimeZone.TimeZoneId = timeZoneId;
-            userTimeZone.TimeZoneOrder = timeZoneOrder;
-            userTimeZone.CreatedBy = createdBy;
-            userTimeZone.CreatedDate = createdDate;
-            return userTimeZone;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid UserTimeZoneId
-        {
-            get
-            {
-                return _UserTimeZoneId;
-            }
-            set
-            {
-                if (_UserTimeZoneId != value)
-                {
-                    OnUserTimeZoneIdChanging(value);
-                    ReportPropertyChanging("UserTimeZoneId");
-                    _UserTimeZoneId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UserTimeZoneId");
-                    OnUserTimeZoneIdChanged();
-                }
-            }
-        }
-        private global::System.Guid _UserTimeZoneId;
-        partial void OnUserTimeZoneIdChanging(global::System.Guid value);
-        partial void OnUserTimeZoneIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid UserId
-        {
-            get
-            {
-                return _UserId;
-            }
-            set
-            {
-                OnUserIdChanging(value);
-                ReportPropertyChanging("UserId");
-                _UserId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("UserId");
-                OnUserIdChanged();
-            }
-        }
-        private global::System.Guid _UserId;
-        partial void OnUserIdChanging(global::System.Guid value);
-        partial void OnUserIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid TimeZoneId
-        {
-            get
-            {
-                return _TimeZoneId;
-            }
-            set
-            {
-                OnTimeZoneIdChanging(value);
-                ReportPropertyChanging("TimeZoneId");
-                _TimeZoneId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TimeZoneId");
-                OnTimeZoneIdChanged();
-            }
-        }
-        private global::System.Guid _TimeZoneId;
-        partial void OnTimeZoneIdChanging(global::System.Guid value);
-        partial void OnTimeZoneIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Byte TimeZoneOrder
-        {
-            get
-            {
-                return _TimeZoneOrder;
-            }
-            set
-            {
-                OnTimeZoneOrderChanging(value);
-                ReportPropertyChanging("TimeZoneOrder");
-                _TimeZoneOrder = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TimeZoneOrder");
-                OnTimeZoneOrderChanged();
-            }
-        }
-        private global::System.Byte _TimeZoneOrder;
-        partial void OnTimeZoneOrderChanging(global::System.Byte value);
-        partial void OnTimeZoneOrderChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid CreatedBy
-        {
-            get
-            {
-                return _CreatedBy;
-            }
-            set
-            {
-                OnCreatedByChanging(value);
-                ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CreatedBy");
-                OnCreatedByChanged();
-            }
-        }
-        private global::System.Guid _CreatedBy;
-        partial void OnCreatedByChanging(global::System.Guid value);
-        partial void OnCreatedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime CreatedDate
-        {
-            get
-            {
-                return _CreatedDate;
-            }
-            set
-            {
-                OnCreatedDateChanging(value);
-                ReportPropertyChanging("CreatedDate");
-                _CreatedDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CreatedDate");
-                OnCreatedDateChanged();
-            }
-        }
-        private global::System.DateTime _CreatedDate;
-        partial void OnCreatedDateChanging(global::System.DateTime value);
-        partial void OnCreatedDateChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Guid> ModifiedBy
-        {
-            get
-            {
-                return _ModifiedBy;
-            }
-            set
-            {
-                OnModifiedByChanging(value);
-                ReportPropertyChanging("ModifiedBy");
-                _ModifiedBy = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ModifiedBy");
-                OnModifiedByChanged();
-            }
-        }
-        private Nullable<global::System.Guid> _ModifiedBy;
-        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
-        partial void OnModifiedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> ModifiedDate
-        {
-            get
-            {
-                return _ModifiedDate;
-            }
-            set
-            {
-                OnModifiedDateChanging(value);
-                ReportPropertyChanging("ModifiedDate");
-                _ModifiedDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ModifiedDate");
-                OnModifiedDateChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _ModifiedDate;
-        partial void OnModifiedDateChanging(Nullable<global::System.DateTime> value);
-        partial void OnModifiedDateChanged();
-
-        #endregion
-    
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="UserWeather")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class UserWeather : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new UserWeather object.
-        /// </summary>
-        /// <param name="userWeatherId">Initial value of the UserWeatherId property.</param>
-        /// <param name="userId">Initial value of the UserId property.</param>
-        /// <param name="weatherMasterId">Initial value of the WeatherMasterId property.</param>
-        /// <param name="weatherOrder">Initial value of the WeatherOrder property.</param>
-        /// <param name="recStatus">Initial value of the RecStatus property.</param>
-        /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static UserWeather CreateUserWeather(global::System.Guid userWeatherId, global::System.Guid userId, global::System.Guid weatherMasterId, global::System.Byte weatherOrder, global::System.Byte recStatus, global::System.DateTime createdDate)
-        {
-            UserWeather userWeather = new UserWeather();
-            userWeather.UserWeatherId = userWeatherId;
-            userWeather.UserId = userId;
-            userWeather.WeatherMasterId = weatherMasterId;
-            userWeather.WeatherOrder = weatherOrder;
-            userWeather.RecStatus = recStatus;
-            userWeather.CreatedDate = createdDate;
-            return userWeather;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid UserWeatherId
-        {
-            get
-            {
-                return _UserWeatherId;
-            }
-            set
-            {
-                if (_UserWeatherId != value)
-                {
-                    OnUserWeatherIdChanging(value);
-                    ReportPropertyChanging("UserWeatherId");
-                    _UserWeatherId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UserWeatherId");
-                    OnUserWeatherIdChanged();
-                }
-            }
-        }
-        private global::System.Guid _UserWeatherId;
-        partial void OnUserWeatherIdChanging(global::System.Guid value);
-        partial void OnUserWeatherIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid UserId
-        {
-            get
-            {
-                return _UserId;
-            }
-            set
-            {
-                OnUserIdChanging(value);
-                ReportPropertyChanging("UserId");
-                _UserId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("UserId");
-                OnUserIdChanged();
-            }
-        }
-        private global::System.Guid _UserId;
-        partial void OnUserIdChanging(global::System.Guid value);
-        partial void OnUserIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid WeatherMasterId
-        {
-            get
-            {
-                return _WeatherMasterId;
-            }
-            set
-            {
-                OnWeatherMasterIdChanging(value);
-                ReportPropertyChanging("WeatherMasterId");
-                _WeatherMasterId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WeatherMasterId");
-                OnWeatherMasterIdChanged();
-            }
-        }
-        private global::System.Guid _WeatherMasterId;
-        partial void OnWeatherMasterIdChanging(global::System.Guid value);
-        partial void OnWeatherMasterIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Byte WeatherOrder
-        {
-            get
-            {
-                return _WeatherOrder;
-            }
-            set
-            {
-                OnWeatherOrderChanging(value);
-                ReportPropertyChanging("WeatherOrder");
-                _WeatherOrder = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WeatherOrder");
-                OnWeatherOrderChanged();
-            }
-        }
-        private global::System.Byte _WeatherOrder;
-        partial void OnWeatherOrderChanging(global::System.Byte value);
-        partial void OnWeatherOrderChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Byte RecStatus
-        {
-            get
-            {
-                return _RecStatus;
-            }
-            set
-            {
-                OnRecStatusChanging(value);
-                ReportPropertyChanging("RecStatus");
-                _RecStatus = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("RecStatus");
-                OnRecStatusChanged();
-            }
-        }
-        private global::System.Byte _RecStatus;
-        partial void OnRecStatusChanging(global::System.Byte value);
-        partial void OnRecStatusChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime CreatedDate
-        {
-            get
-            {
-                return _CreatedDate;
-            }
-            set
-            {
-                OnCreatedDateChanging(value);
-                ReportPropertyChanging("CreatedDate");
-                _CreatedDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CreatedDate");
-                OnCreatedDateChanged();
-            }
-        }
-        private global::System.DateTime _CreatedDate;
-        partial void OnCreatedDateChanging(global::System.DateTime value);
-        partial void OnCreatedDateChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> ModifiedDate
-        {
-            get
-            {
-                return _ModifiedDate;
-            }
-            set
-            {
-                OnModifiedDateChanging(value);
-                ReportPropertyChanging("ModifiedDate");
-                _ModifiedDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ModifiedDate");
-                OnModifiedDateChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _ModifiedDate;
-        partial void OnModifiedDateChanging(Nullable<global::System.DateTime> value);
-        partial void OnModifiedDateChanged();
-
-        #endregion
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Weather__Creat__2C3393D0", "User")]
-        public User CreatedBy
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__Weather__Creat__2C3393D0", "User").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__Weather__Creat__2C3393D0", "User").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<User> CreatedByReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__Weather__Creat__2C3393D0", "User");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__Weather__Creat__2C3393D0", "User", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SkillGapModel", "FK__Weather__Modif__2D27B809", "User")]
-        public User ModifiedBy
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__Weather__Modif__2D27B809", "User").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__Weather__Modif__2D27B809", "User").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<User> ModifiedByReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<User>("SkillGapModel.FK__Weather__Modif__2D27B809", "User");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User>("SkillGapModel.FK__Weather__Modif__2D27B809", "User", value);
-                }
-            }
-        }
-
-        #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="SkillGapModel", Name="WeatherMaster")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class WeatherMaster : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new WeatherMaster object.
-        /// </summary>
-        /// <param name="weatherMasterId">Initial value of the WeatherMasterId property.</param>
-        /// <param name="city">Initial value of the City property.</param>
-        /// <param name="woeId">Initial value of the WoeId property.</param>
-        /// <param name="recStatus">Initial value of the RecStatus property.</param>
-        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
-        /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static WeatherMaster CreateWeatherMaster(global::System.Guid weatherMasterId, global::System.String city, global::System.Int64 woeId, global::System.Byte recStatus, global::System.Guid createdBy, global::System.DateTime createdDate)
-        {
-            WeatherMaster weatherMaster = new WeatherMaster();
-            weatherMaster.WeatherMasterId = weatherMasterId;
-            weatherMaster.City = city;
-            weatherMaster.WoeId = woeId;
-            weatherMaster.RecStatus = recStatus;
-            weatherMaster.CreatedBy = createdBy;
-            weatherMaster.CreatedDate = createdDate;
-            return weatherMaster;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid WeatherMasterId
-        {
-            get
-            {
-                return _WeatherMasterId;
-            }
-            set
-            {
-                if (_WeatherMasterId != value)
-                {
-                    OnWeatherMasterIdChanging(value);
-                    ReportPropertyChanging("WeatherMasterId");
-                    _WeatherMasterId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("WeatherMasterId");
-                    OnWeatherMasterIdChanged();
-                }
-            }
-        }
-        private global::System.Guid _WeatherMasterId;
-        partial void OnWeatherMasterIdChanging(global::System.Guid value);
-        partial void OnWeatherMasterIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String City
-        {
-            get
-            {
-                return _City;
-            }
-            set
-            {
-                OnCityChanging(value);
-                ReportPropertyChanging("City");
-                _City = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("City");
-                OnCityChanged();
-            }
-        }
-        private global::System.String _City;
-        partial void OnCityChanging(global::System.String value);
-        partial void OnCityChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 WoeId
-        {
-            get
-            {
-                return _WoeId;
-            }
-            set
-            {
-                OnWoeIdChanging(value);
-                ReportPropertyChanging("WoeId");
-                _WoeId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("WoeId");
-                OnWoeIdChanged();
-            }
-        }
-        private global::System.Int64 _WoeId;
-        partial void OnWoeIdChanging(global::System.Int64 value);
-        partial void OnWoeIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Byte RecStatus
-        {
-            get
-            {
-                return _RecStatus;
-            }
-            set
-            {
-                OnRecStatusChanging(value);
-                ReportPropertyChanging("RecStatus");
-                _RecStatus = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("RecStatus");
-                OnRecStatusChanged();
-            }
-        }
-        private global::System.Byte _RecStatus;
-        partial void OnRecStatusChanging(global::System.Byte value);
-        partial void OnRecStatusChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid CreatedBy
-        {
-            get
-            {
-                return _CreatedBy;
-            }
-            set
-            {
-                OnCreatedByChanging(value);
-                ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CreatedBy");
-                OnCreatedByChanged();
-            }
-        }
-        private global::System.Guid _CreatedBy;
-        partial void OnCreatedByChanging(global::System.Guid value);
-        partial void OnCreatedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime CreatedDate
-        {
-            get
-            {
-                return _CreatedDate;
-            }
-            set
-            {
-                OnCreatedDateChanging(value);
-                ReportPropertyChanging("CreatedDate");
-                _CreatedDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CreatedDate");
-                OnCreatedDateChanged();
-            }
-        }
-        private global::System.DateTime _CreatedDate;
-        partial void OnCreatedDateChanging(global::System.DateTime value);
-        partial void OnCreatedDateChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Guid> ModifiedBy
-        {
-            get
-            {
-                return _ModifiedBy;
-            }
-            set
-            {
-                OnModifiedByChanging(value);
-                ReportPropertyChanging("ModifiedBy");
-                _ModifiedBy = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ModifiedBy");
-                OnModifiedByChanged();
-            }
-        }
-        private Nullable<global::System.Guid> _ModifiedBy;
-        partial void OnModifiedByChanging(Nullable<global::System.Guid> value);
-        partial void OnModifiedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> ModifiedDate
-        {
-            get
-            {
-                return _ModifiedDate;
-            }
-            set
-            {
-                OnModifiedDateChanging(value);
-                ReportPropertyChanging("ModifiedDate");
-                _ModifiedDate = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ModifiedDate");
-                OnModifiedDateChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _ModifiedDate;
-        partial void OnModifiedDateChanging(Nullable<global::System.DateTime> value);
-        partial void OnModifiedDateChanged();
-
-        #endregion
-    
     }
 
     #endregion
