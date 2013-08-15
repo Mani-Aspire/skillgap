@@ -106,8 +106,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\SessionWrapper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IConnectController.cs" />
     <Compile Include="Controllers\KnowledgeBaseController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,6 +224,7 @@
     <Content Include="Views\KnowledgeBase\AttachDoc.cshtml" />
     <Content Include="Views\KnowledgeBase\Index.cshtml" />
     <Content Include="Views\KnowledgeBase\SubFolder.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -230,7 +234,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\Layout.cshtml" />
+    <Content Include="Views\Shared\layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />

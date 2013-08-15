@@ -8,7 +8,7 @@ using System.ServiceModel;
 
 namespace iConnect.Presentation.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : IConnectController
     {
 		//
         // GET: /Home/

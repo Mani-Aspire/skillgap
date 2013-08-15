@@ -1,28 +1,16 @@
 ﻿body
 {
-    padding-top: 85px;
-    padding-bottom: 40px;
     height:100%
 }
 
-.navbar-inner
+.customContainer
 {
-    padding: 6px 0 0px 0;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
-.navbar-innerSmall
+.loginContainer
 {
-    min-height: 25px;
-    padding: 0px;
-}
-
-.container-fluidMain
-{
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-.topNavigator
-{
-    line-height: 10px;
+    max-width: 450px;
+    margin-top: 200px;
 }
